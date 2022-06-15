@@ -1,6 +1,5 @@
 import React from 'react'
 import { Button } from '@mui/material'
-// import devPicture from '../..public/images/valdas_wb.jpg'
 
 const Home = () => (
     <>
