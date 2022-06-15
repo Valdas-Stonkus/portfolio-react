@@ -1,17 +1,15 @@
-import React from 'react'
 import { Outlet } from 'react-router-dom'
+import { Container } from '@mui/material'
+import { Margin } from '@mui/icons-material'
 import Header from '../Header'
 import Footer from '../Footer'
-// import './layout.scss'
 
 const Layout = () => (
-    <div className="layout">
-        <div className="layout__content">
-            <Header />
-            <Outlet />
-            <Footer />
-        </div>
-    </div>
+    <Container fixed maxWidth="lg" sx={{ bgcolor: 'white', borderRadius: '5px' }}>
+        <Header />
+        <Outlet />
+        <Footer />
+    </Container>
 )
 
 export default Layout
