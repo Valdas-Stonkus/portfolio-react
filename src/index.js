@@ -4,12 +4,12 @@ import CssBaseline from '@mui/material/CssBaseline'
 import { BrowserRouter } from 'react-router-dom'
 import App from './App'
 import reportWebVitals from './reportWebVitals'
-import PostsApi from './api/contentful/contentful.api'
+// import PostsApi from './api/contentful/contentful.api'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 
-const posts = new PostsApi().getPosts()
-console.table(posts)
+// const posts = new PostsApi().getPosts()
+// console.table(posts)
 
 root.render(
     // <React.StrictMode>
