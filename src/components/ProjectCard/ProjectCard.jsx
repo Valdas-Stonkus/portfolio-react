@@ -6,6 +6,23 @@ import Typography from '@mui/material/Typography'
 import Box from '@mui/material/Box'
 import Stack from '@mui/material/Stack'
 import { Button, CardActionArea, CardActions } from '@mui/material'
+import { ThemeProvider, createTheme } from '@mui/material/styles'
+
+const theme = createTheme({
+    components: {
+        MuiButton: {
+            styleOverrides: {
+                root: ({ ownerState }) => ({
+                    ...(ownerState.variant === 'contained'
+                        && ownerState.color === 'primary' && {
+                        backgroundColor: '#003060',
+                        color: '#fff'
+                    })
+                })
+            }
+        }
+    }
+})
 
 const ProjectCard = ({ project }) => (
     <Card sx={{
@@ -49,8 +66,14 @@ const ProjectCard = ({ project }) => (
         >
 
             <CardActions style={{ padding: '16px' }}>
-                <Button variant="contained" sx={{ color: 'grey', backgroundColor: 'grey.900' }}>Demo</Button>
-                <Button variant="text" sx={{ color: 'grey' }}>Github repo</Button>
+                {/* <Button variant="contained" sx={{ color: 'grey', backgroundColor: 'grey.900' }}>Demo</Button> */}
+                <Button variant="contained" color="primary">Demo</Button>
+                <Button variant="text" sx={{ color: 'theme.palette.grey[500]' }}>Github repo</Button>
+
+                <ThemeProvider theme={theme}>
+                    <Button variant="contained">font-size: 1rem</Button>
+                </ThemeProvider>
+
             </CardActions>
         </Box>
 
