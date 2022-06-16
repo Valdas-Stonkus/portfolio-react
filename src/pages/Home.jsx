@@ -1,12 +1,7 @@
 import React from 'react'
-import { Button } from '@mui/material'
+import GridWrapper from '../components/Projects/GridWrapper'
 
 const Home = () => (
-    <>
-        <div className="container1">
-            Home page here
-        </div>
-        <Button variant="outlined" color="primary">Hello World</Button>
-    </>
+    <GridWrapper />
 )
 export default Home

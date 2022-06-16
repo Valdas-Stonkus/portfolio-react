@@ -1,6 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { CssBaseline, Container } from '@mui/material'
+import { ThemeProvider, createTheme, responsiveFontSizes } from '@mui/material/styles'
 import { BrowserRouter } from 'react-router-dom'
 import App from './App'
 import reportWebVitals from './reportWebVitals'
@@ -9,21 +10,36 @@ import reportWebVitals from './reportWebVitals'
 // const posts = new PostsApi().getPosts()
 // console.table(posts)
 
+let theme = createTheme({
+    palette: {
+        background: {
+            default: 'rgb(25, 29, 34)'
+        }
+    }
+    // typography: {
+    //     subtitle1: {
+    //         fontWeight: 500
+    //     }
+    // }
+})
+theme = responsiveFontSizes(theme)
+
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
     <React.StrictMode>
-        <CssBaseline />
-        <Container
-            maxWidth="false"
-            sx={{
-                bgcolor: 'rgb(25, 29, 34)', height: '100vh', padding: '10px'
-            }}
-        >
-            <BrowserRouter>
-                <App />
-            </BrowserRouter>
-        </Container>
-
+        <ThemeProvider theme={theme}>
+            <CssBaseline />
+            <Container
+                maxWidth="false"
+                sx={{
+                    height: '100vh', padding: '3px'
+                }}
+            >
+                <BrowserRouter>
+                    <App />
+                </BrowserRouter>
+            </Container>
+        </ThemeProvider>
     </React.StrictMode>
 )
 
