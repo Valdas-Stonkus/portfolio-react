@@ -1,5 +1,5 @@
 import React from 'react'
-import GridWrapper from '../components/Projects/GridWrapper'
+import GridWrapper from '../components/ProjectCard/GridWrapper'
 
 const Home = () => (
     <GridWrapper />

@@ -1,10 +1,10 @@
 /* eslint-disable max-len */
 import { Grid } from '@mui/material'
-import { projects } from '../../data/projectsData'
-import ProjectCard from './ProjectCard'
+import { projects } from '../../../data/projectsData'
+import ProjectCard from '..'
 
 const GridWrapper = () => (
-    <Grid container spacing={2} alignItems="stretch">
+    <Grid container spacing={2}>
         {projects.map((project) => (
             <Grid
                 item

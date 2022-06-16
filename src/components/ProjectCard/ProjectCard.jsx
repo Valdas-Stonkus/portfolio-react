@@ -3,8 +3,8 @@ import Card from '@mui/material/Card'
 import CardContent from '@mui/material/CardContent'
 import CardMedia from '@mui/material/CardMedia'
 import Typography from '@mui/material/Typography'
-import Grid from '@mui/material/Grid'
 import Box from '@mui/material/Box'
+import Stack from '@mui/material/Stack'
 import { Button, CardActionArea, CardActions } from '@mui/material'
 
 const ProjectCard = ({ project }) => (
@@ -17,7 +17,6 @@ const ProjectCard = ({ project }) => (
     }}
     >
         <CardActionArea>
-
             <CardMedia
                 component="img"
                 height="140"
@@ -48,9 +47,10 @@ const ProjectCard = ({ project }) => (
             marginTop: 'auto'
         }}
         >
-            <CardActions>
-                <Button size="small">Demo</Button>
-                <Button size="small">Github repo</Button>
+
+            <CardActions style={{ padding: '16px' }}>
+                <Button variant="contained" sx={{ color: 'grey', backgroundColor: 'grey.900' }}>Demo</Button>
+                <Button variant="text" sx={{ color: 'grey' }}>Github repo</Button>
             </CardActions>
         </Box>
 
