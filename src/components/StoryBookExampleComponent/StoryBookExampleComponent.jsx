@@ -1,6 +1,6 @@
 import React from 'react'
 // import logo from '/images/logo.svg'
-import '../../App.css'
+// import '../../App.css'
 
 // cia priimam propsus i komponenta is stories
 const StoryBookExampleComponent = ({
