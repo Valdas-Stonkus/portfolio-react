@@ -1,6 +1,12 @@
+import Footer from '../../components/Footer'
+import Header from '../../components/Header'
+import Welcome from '../../components/Welcome'
+
 const WelcomePage = () => (
-    <div>
-        <h1>WelcomePage!</h1>
-    </div>
+    <>
+        <Header />
+        <Welcome />
+        <Footer />
+    </>
 )
 export default WelcomePage
