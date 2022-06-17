@@ -27,6 +27,7 @@ root.render(
         <Container
             maxWidth="false"
             style={{ height: '100vh', background: 'linear-gradient(to right bottom, #430089, #82ffa1)' }}
+            sx={{ overflow: 'hidden' }}
         >
             <BrowserRouter>
                 <App />
