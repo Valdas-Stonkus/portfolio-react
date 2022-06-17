@@ -1,38 +1,25 @@
-$rightPageScale: 0.7;
-
-.page {
-    position: absolute;
-    background-color: white;
-
-}
-
-.page-left {
-    left: 0px;
-    top: 50px;
-    z-index: 1;
-}
-
-.page-right {
-    right: 0px;
-    top: -1px;
-    z-index: 0;
-    transform: scale($rightPageScale);
-}
+$pageScale: 0.7;
+$topPosition: 50px;
+$animTime: 0.5s;
 
 .page-left-fadeIn {
-    animation: left-fadeIn 0.5s linear;
+    animation: left-fadeIn $animTime linear normal forwards;
 }
 
 @keyframes left-fadeIn {
     0% {
         z-index: 0;
+        transform: scale($pageScale);
+        top: 0;
+        left: 0;
     }
 
     30% {
         transform: translateX(-700px);
+        z-index: 0;
     }
 
-    60% {
+    50% {
         z-index: 2;
     }
 
@@ -40,43 +27,79 @@ $rightPageScale: 0.7;
         transform: translateX(0px);
         transform: scale(1);
         z-index: 2;
+        top: $topPosition;
+        left: 0;
     }
-}
-
-.page-right-fadeIn {
-    animation: right-fadeIn 0.5s linear normal forwards;
 }
 
 .page-right-fadeOut {
-    animation: right-fadeOut 0.5s linear;
-}
-
-@keyframes right-fadeIn {
-    0% {}
-
-    30% {
-        transform: translateX(700px);
-    }
-
-    60% {
-        z-index: 1;
-    }
-
-    100% {
-        transform: translateX(0px);
-        transform: scale(1);
-        z-index: 1;
-    }
+    animation: right-fadeOut $animTime linear normal forwards;
 }
 
 @keyframes right-fadeOut {
     0% {
         z-index: 1;
         transform: scale(1);
+        top: $topPosition;
+        right: 0;
+
     }
 
     100% {
-        transform: scale($rightPageScale);
+        transform: scale($pageScale);
         z-index: 0;
+        top: 0;
+        right: 0;
+    }
+}
+
+.page-right-fadeIn {
+    animation: right-fadeIn $animTime linear normal forwards;
+}
+
+@keyframes right-fadeIn {
+    0% {
+        z-index: 0;
+        transform: scale($pageScale);
+        top: 0;
+        right: 0;
+    }
+
+    30% {
+        transform: translateX(700px);
+        z-index: 0;
+
+    }
+
+    50% {
+        z-index: 2;
+    }
+
+    100% {
+        transform: translateX(0px);
+        transform: scale(1);
+        z-index: 2;
+        top: $topPosition;
+        right: 0;
+    }
+}
+
+.page-left-fadeOut {
+    animation: left-fadeOut $animTime linear normal forwards;
+}
+
+@keyframes left-fadeOut {
+    0% {
+        z-index: 1;
+        transform: scale(1);
+        top: $topPosition;
+        left: 0;
+    }
+
+    100% {
+        transform: scale($pageScale);
+        z-index: 0;
+        top: 0;
+        left: 0;
     }
 }

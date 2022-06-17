@@ -13,15 +13,17 @@ const LayoutTwoPages = () => {
     useEffect(
         () => {
             if (isLeftPageActive) {
+                rightPageEl.current.classList.remove('page-right-fadeIn')
+                leftPageEl.current.classList.remove('page-left-fadeOut')
+
                 leftPageEl.current.classList.add('page-left-fadeIn')
                 rightPageEl.current.classList.add('page-right-fadeOut')
-                setTimeout(() => {
-                    rightPageEl.current.classList.remove('page-right-fadeIn')
-                }, 500)
             } else {
                 leftPageEl.current.classList.remove('page-left-fadeIn')
                 rightPageEl.current.classList.remove('page-right-fadeOut')
+
                 rightPageEl.current.classList.add('page-right-fadeIn')
+                leftPageEl.current.classList.add('page-left-fadeOut')
             }
         },
         [isLeftPageActive]
@@ -45,25 +47,27 @@ const LayoutTwoPages = () => {
             }}
         >
             <Container
-                className="page page-left"
                 ref={leftPageEl}
                 onClick={() => clickHandler('activateFirstPage')}
                 disableGutters
                 maxWidth="md"
                 sx={{
-                    boxShadow: 24
+                    boxShadow: 24,
+                    position: 'absolute',
+                    backgroundColor: 'white'
                 }}
             >
                 <WelcomePage />
             </Container>
             <Container
-                className="page page-right"
                 ref={rightPageEl}
                 onClick={() => clickHandler('')}
                 disableGutters
                 maxWidth="md"
                 sx={{
-                    boxShadow: 24
+                    boxShadow: 24,
+                    position: 'absolute',
+                    backgroundColor: 'white'
                 }}
             >
                 <ResumePage />
