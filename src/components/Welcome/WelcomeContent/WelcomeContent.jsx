@@ -1,6 +1,6 @@
-import { Grid } from '@mui/material'
+import { Box, Grid } from '@mui/material'
 
 const WelcomeContent = () => (
-    <div>WelcomeContent</div>
+    <Box bgcolor="blueviolet">WelcomeContent</Box>
 )
 export default WelcomeContent

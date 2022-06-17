@@ -1,6 +1,6 @@
-import { Grid } from '@mui/material'
+import { Box } from '@mui/material'
 
 const WelcomeAvatar = () => (
-    <div>Avatar</div>
+    <Box bgcolor="red">Avatar</Box>
 )
 export default WelcomeAvatar
