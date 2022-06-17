@@ -1,0 +1,82 @@
+$rightPageScale: 0.7;
+
+.page {
+    position: absolute;
+    background-color: white;
+
+}
+
+.page-left {
+    left: 0px;
+    top: 50px;
+    z-index: 1;
+}
+
+.page-right {
+    right: 0px;
+    top: -1px;
+    z-index: 0;
+    transform: scale($rightPageScale);
+}
+
+.page-left-fadeIn {
+    animation: left-fadeIn 0.5s linear;
+}
+
+@keyframes left-fadeIn {
+    0% {
+        z-index: 0;
+    }
+
+    30% {
+        transform: translateX(-700px);
+    }
+
+    60% {
+        z-index: 2;
+    }
+
+    100% {
+        transform: translateX(0px);
+        transform: scale(1);
+        z-index: 2;
+    }
+}
+
+.page-right-fadeIn {
+    animation: right-fadeIn 0.5s linear normal forwards;
+}
+
+.page-right-fadeOut {
+    animation: right-fadeOut 0.5s linear;
+}
+
+@keyframes right-fadeIn {
+    0% {}
+
+    30% {
+        transform: translateX(700px);
+    }
+
+    60% {
+        z-index: 1;
+    }
+
+    100% {
+        transform: translateX(0px);
+        transform: scale(1);
+        z-index: 1;
+    }
+}
+
+@keyframes right-fadeOut {
+    0% {
+        z-index: 1;
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale($rightPageScale);
+        z-index: 0;
+    }
+}
