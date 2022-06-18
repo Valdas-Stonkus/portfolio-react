@@ -9,7 +9,7 @@ $animTime: 0.5s;
 @keyframes left-fadeIn {
     0% {
         z-index: 0;
-        transform: scale($pageScale);
+        // transform: scale($pageScale);
         top: 0;
         left: 0;
     }
@@ -47,6 +47,7 @@ $animTime: 0.5s;
 
     100% {
         transform: scale($pageScale);
+        transform-origin: top;
         z-index: 0;
         top: 0;
         right: 0;
@@ -60,7 +61,6 @@ $animTime: 0.5s;
 @keyframes right-fadeIn {
     0% {
         z-index: 0;
-        transform: scale($pageScale);
         top: 0;
         right: 0;
     }
@@ -98,8 +98,13 @@ $animTime: 0.5s;
 
     100% {
         transform: scale($pageScale);
+        transform-origin: top;
         z-index: 0;
         top: 0;
         left: 0;
     }
+}
+
+.cursor-zoom {
+    cursor: zoom-in;
 }
