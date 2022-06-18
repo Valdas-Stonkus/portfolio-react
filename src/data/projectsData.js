@@ -1,4 +1,3 @@
-/* eslint-disable max-len */
 export const projects = [
     {
         id: 1, title: 'Project 1', shortDescription: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius corrupti quisquam eaque .', imgUrl: 'http://fakeimg.pl/500?font=lobster', imgAlt: 'project bla bla bla', tags: ['React', 'JavaScript', 'Python']

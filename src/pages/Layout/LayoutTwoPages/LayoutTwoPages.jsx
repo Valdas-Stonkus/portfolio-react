@@ -15,15 +15,19 @@ const LayoutTwoPages = () => {
             if (isLeftPageActive) {
                 rightPageEl.current.classList.remove('page-right-fadeIn')
                 leftPageEl.current.classList.remove('page-left-fadeOut')
+                leftPageEl.current.classList.remove('cursor-zoom')
 
                 leftPageEl.current.classList.add('page-left-fadeIn')
                 rightPageEl.current.classList.add('page-right-fadeOut')
+                rightPageEl.current.classList.add('cursor-zoom')
             } else {
                 leftPageEl.current.classList.remove('page-left-fadeIn')
                 rightPageEl.current.classList.remove('page-right-fadeOut')
+                rightPageEl.current.classList.remove('cursor-zoom')
 
                 rightPageEl.current.classList.add('page-right-fadeIn')
                 leftPageEl.current.classList.add('page-left-fadeOut')
+                leftPageEl.current.classList.add('cursor-zoom')
             }
         },
         [isLeftPageActive]
