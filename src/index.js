@@ -10,6 +10,9 @@ const theme = createTheme({
     palette: {
         background: {
             default: null // default gradient background set from index.css file
+        },
+        primary: {
+            main: '#000000'
         }
     }
 })
