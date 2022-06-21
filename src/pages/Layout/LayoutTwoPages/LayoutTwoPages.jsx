@@ -1,7 +1,7 @@
 import { Outlet } from 'react-router-dom'
 import { Container } from '@mui/material'
 import { useEffect, useRef, useState } from 'react'
-import WelcomePage from '../../WelcomePage'
+import HomePage from '../../HomePage'
 import ResumePage from '../../ResumePage'
 import './styles.scss'
 
@@ -61,7 +61,7 @@ const LayoutTwoPages = () => {
                     backgroundColor: 'white'
                 }}
             >
-                <WelcomePage />
+                <HomePage />
             </Container>
             <Container
                 ref={rightPageEl}
