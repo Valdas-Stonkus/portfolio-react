@@ -2,7 +2,7 @@
 import './Holder.scss'
 
 const Holder = ({ topHolder = true }) => {
-    const holderClassName = topHolder ? 'holder holder--top' : 'holder holder--bottom'
+    const holderClassName = topHolder ? 'noselect holder holder--top' : 'noselect holder holder--bottom'
     return (
         <div className={holderClassName}>
             <div className="holder--dot">
