@@ -1,0 +1,29 @@
+.holder {
+    position: absolute;
+    background: whitesmoke;
+    width: 100px;
+    height: 50px;
+    border-radius: 10px;
+    opacity: 0.9;
+    color: rgb(160, 160, 160);
+    font-size: 14px;
+
+    &--top {
+        transform: skewX(-25deg) translate(-50%, -50%);
+        left: 0px;
+        top: 0px;
+    }
+
+    &--bottom {
+        transform: skewX(-25deg) translate(50%, 50%);
+        right: 0px;
+        bottom: 0px;
+    }
+
+    &--dot {
+        transform: translate(10%, 0%);
+        font-weight: 600;
+        line-height: 8px;
+        opacity: 0.6;
+    }
+}
