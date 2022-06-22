@@ -14,7 +14,7 @@ const Welcome = () => (
         <Stack
             direction={{ xs: 'column', sm: 'row' }}
             spacing={{ xs: 1, sm: 2, md: 3 }}
-            p={{ xs: 0, sm: 6, md: 10 }}
+            p={{ xs: 0, sm: 6, md: 9 }}
         >
             <Box flex={5}>
                 <AvatarCustom picture={personalPicture} />
