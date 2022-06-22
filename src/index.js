@@ -13,6 +13,14 @@ const theme = createTheme({
         },
         primary: {
             main: '#000000'
+        },
+        secondary: {
+            main: '#f7f8f9'
+        }
+    },
+    typography: {
+        button: {
+            textTransform: 'none'
         }
     }
 })
