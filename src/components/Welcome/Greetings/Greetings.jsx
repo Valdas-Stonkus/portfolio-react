@@ -14,7 +14,7 @@ const Greetings = () => (
         </Typography>
         <Stack direction="row" spacing={2} mt={2} justifyContent="center">
             <Button variant="contained" bgcolor="black">Contact me</Button>
-            <Button variant="outlined">Check my work</Button>
+            <Button variant="outlined" color="secondary">Check my work</Button>
         </Stack>
     </>
 )

@@ -15,6 +15,7 @@ const Welcome = () => (
             direction={{ xs: 'column', sm: 'row' }}
             spacing={{ xs: 1, sm: 2, md: 3 }}
             p={{ xs: 0, sm: 6, md: 9 }}
+            pt={{ xs: 0, sm: 5, md: 5 }}
         >
             <Box flex={5}>
                 <AvatarCustom picture={personalPicture} />

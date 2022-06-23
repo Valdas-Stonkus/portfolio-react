@@ -6,13 +6,15 @@ import Home from './pages/Home'
 import Post from './pages/Post'
 
 const App = () => (
-    <Routes>
-        <Route element={<LayoutTwoPages />}>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/post/:id" element={<Post />} />
-        </Route>
-    </Routes>
+    // <Routes>
+    //     <Route element={<LayoutTwoPages />}>
+    //         <Route path="/" element={<Home />} />
+    //         <Route path="/about" element={<About />} />
+    //         <Route path="/post/:id" element={<Post />} />
+    //     </Route>
+    // </Routes>
+    // NOTE: remove routes and page files if not used
+    <LayoutTwoPages />
 
 )
 

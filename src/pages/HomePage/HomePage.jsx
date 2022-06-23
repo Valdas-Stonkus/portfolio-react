@@ -1,13 +1,13 @@
-import Footer from '../../components/Footer'
 import Header from '../../components/Header'
 import Welcome from '../../components/Welcome'
+import Works from '../../components/Works'
+import Footer from '../../components/Footer'
 
 const HomePage = () => (
     <>
         <Header />
         <Welcome />
-        {/* <Projects />
-        <Contacts /> */}
+        <Works />
         <Footer />
     </>
 )

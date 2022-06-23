@@ -1,7 +1,6 @@
 import React from 'react'
-import GridWrapper from '../components/ProjectCard/GridWrapper'
 
 const Home = () => (
-    <GridWrapper />
+    <div>Alio</div>
 )
 export default Home
