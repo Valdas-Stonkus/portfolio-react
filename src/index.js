@@ -15,7 +15,7 @@ const theme = createTheme({
             main: '#000000'
         },
         secondary: {
-            main: '#f7f8f9'
+            main: '#424242'
         }
     },
     typography: {
@@ -28,8 +28,8 @@ const theme = createTheme({
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
     <React.StrictMode>
+        <CssBaseline />
         <ThemeProvider theme={theme}>
-            <CssBaseline />
             <BrowserRouter>
                 <Container
                     maxWidth="false"

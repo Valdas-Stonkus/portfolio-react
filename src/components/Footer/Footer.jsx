@@ -5,7 +5,7 @@ import {
 const Footer = () => (
     <Container>
 
-        <Box display="flex" justifyContent="end" gap={1} p={1} mb={2} mt={2} bgcolor="secondary.main" color="secondary">
+        <Box display="flex" justifyContent="end" gap={1} p={1} mb={2} mt={2} color="secondary">
             <Typography variant="caption">
                 Made by
             </Typography>
