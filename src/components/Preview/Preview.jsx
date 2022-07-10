@@ -9,19 +9,15 @@ import { useEffect, useRef, useState } from 'react'
 import Images from './Images'
 
 const Preview = ({ project, show, setShow }) => {
-    if (!show) return null
     const [scroll, setScroll] = useState('paper')
 
     const handleClickOpen = (scrollType) => () => {
         setShow(true)
         setScroll(scrollType)
     }
-
-    const handleClose = () => {
-        setShow(false)
-    }
-
+    const handleClose = () => setShow(false)
     const descriptionElementRef = useRef(null)
+
     useEffect(() => {
         if (show) {
             const { current: descriptionElement } = descriptionElementRef
@@ -30,6 +26,8 @@ const Preview = ({ project, show, setShow }) => {
             }
         }
     }, [show])
+
+    if (!show) return null
 
     return (
         <div>
@@ -49,6 +47,10 @@ const Preview = ({ project, show, setShow }) => {
                         ref={descriptionElementRef}
                         tabIndex={-1}
                     />
+                    <Box p={2}>
+                        <Typography variant="h6" color="text.secondary">Description</Typography>
+                        <Typography variant="body" color="text.secondary">{project.description}</Typography>
+                    </Box>
                     <Box p={2}>
                         <Typography variant="h6" color="text.secondary">Problem</Typography>
                         <Typography variant="body" color="text.secondary">{project.problem}</Typography>

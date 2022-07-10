@@ -3,7 +3,7 @@ export const projects = [
     {
         id: 1,
         title: 'Portfolio',
-        shortDescription: 'This project is my personal portfolio website. First it was made with vanilla HTML and CSS, after that with React.',
+        description: 'This project is my personal portfolio website. First it was made with vanilla HTML and CSS, after that with React.',
         imgUrl: 'http://fakeimg.pl/500?font=lobster',
         imgAlt: 'Thumbnail of Portfolio website',
         tags: ['React', 'SASS', 'MUI'],
@@ -70,7 +70,7 @@ export const projects = [
     {
         id: 2,
         title: 'Portfolio',
-        shortDescription: 'This project is my personal portfolio website. First it was made with vanilla HTML and CSS, after that with React.',
+        description: 'This project is my personal portfolio website. First it was made with vanilla HTML and CSS, after that with React.',
         imgUrl: 'http://fakeimg.pl/500?font=lobster',
         imgAlt: 'Thumbnail of Portfolio website',
         tags: ['React', 'SASS', 'MUI'],
@@ -136,7 +136,7 @@ export const projects = [
     {
         id: 3,
         title: 'Portfolio',
-        shortDescription: 'This project is my personal portfolio website. First it was made with vanilla HTML and CSS, after that with React.',
+        description: 'This project is my personal portfolio website. First it was made with vanilla HTML and CSS, after that with React.',
         imgUrl: 'http://fakeimg.pl/500?font=lobster',
         imgAlt: 'Thumbnail of Portfolio website',
         tags: ['React', 'SASS', 'MUI'],

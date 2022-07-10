@@ -10,6 +10,7 @@ import Preview from '../Preview'
 const Card = ({ project, alwaysShowActionButtons = false }) => {
     const [isMouseOver, setIsMouseOver] = useState(false)
     const [showPreview, setShowPreview] = useState(false)
+    const shortDescription = `${project.description.slice(0, 100)}... `
 
     return (
         <>
@@ -36,17 +37,19 @@ const Card = ({ project, alwaysShowActionButtons = false }) => {
                         </Typography>
                         <Box mb={2}>
                             <Typography variant="body2" color="text.secondary">
-                                {project.shortDescription}
+                                {shortDescription + (isMouseOver || alwaysShowActionButtons ? 'Read more' : '')}
                             </Typography>
                         </Box>
-                        <Typography align="right" variant="overline" color="text.secondary">
-                            {project.tags.map((t, i) => (
-                                <span key={i}>
-                                    {t}
-                                    {' '}
-                                </span>
-                            ))}
-                        </Typography>
+                        <Box sx={{ display: 'flex', justifyContent: 'flex-end' }}>
+                            <Typography align="right" variant="overline" color="text.secondary">
+                                {project.tags.map((t, i) => (
+                                    <span key={i}>
+                                        {t}
+                                        {' '}
+                                    </span>
+                                ))}
+                            </Typography>
+                        </Box>
                     </CardContent>
                 </CardActionArea>
                 <Box sx={{
