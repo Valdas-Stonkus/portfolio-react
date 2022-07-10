@@ -5,7 +5,7 @@ import {
 import GitHubIcon from '@mui/icons-material/GitHub'
 import RemoveRedEyeIcon from '@mui/icons-material/RemoveRedEye'
 import { useState } from 'react'
-import Preview from '../Preview'
+import Preview from './Preview'
 
 const Card = ({ project, alwaysShowActionButtons = false }) => {
     const [isMouseOver, setIsMouseOver] = useState(false)
