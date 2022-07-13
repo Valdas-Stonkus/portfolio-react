@@ -6,7 +6,10 @@ import DialogContent from '@mui/material/DialogContent'
 import DialogContentText from '@mui/material/DialogContentText'
 import DialogTitle from '@mui/material/DialogTitle'
 import { useEffect, useRef, useState } from 'react'
+import RemoveRedEyeIcon from '@mui/icons-material/RemoveRedEye'
+import GitHubIcon from '@mui/icons-material/GitHub'
 import Images from './Images'
+import Tags from '../Tags/Tags'
 
 const Preview = ({ project, show, setShow }) => {
     const [scroll, setScroll] = useState('paper')
@@ -39,6 +42,7 @@ const Preview = ({ project, show, setShow }) => {
                 scroll={scroll}
                 aria-labelledby="scroll-dialog-title"
                 aria-describedby="scroll-dialog-description"
+                maxWidth="md"
             >
                 <DialogTitle id="scroll-dialog-title">{project.title}</DialogTitle>
                 <DialogContent dividers={scroll === 'paper'}>
@@ -62,10 +66,34 @@ const Preview = ({ project, show, setShow }) => {
                     <Box p={2}>
                         <Typography variant="h6" color="text.secondary">Implementation</Typography>
                         <Typography variant="body" color="text.secondary">{project.implementation}</Typography>
+                        <Tags obj={project} />
                     </Box>
                     <Images pictures={project.pictures} />
                 </DialogContent>
-                <DialogActions>
+                <DialogActions sx={{ display: 'flex', justifyContent: 'flex-end', gap: 2 }}>
+                    {project.btnActionTitle ? (
+                        <Button
+                            variant="contained"
+                            color="primary"
+                            startIcon={(
+                                <RemoveRedEyeIcon />
+                            )}
+                            size="small"
+                            href={project.btnActionUrl}
+                            target="_blank"
+                        >
+                            {project.btnActionTitle}
+                        </Button>
+                    ) : null}
+                    <Button
+                        variant="text"
+                        color="secondary"
+                        startIcon={<GitHubIcon />}
+                        href={project.btnRepoUrl}
+                        target="_blank"
+                    >
+                        Github repo
+                    </Button>
                     <Button color="secondary" onClick={handleClose}>Close</Button>
                 </DialogActions>
             </Dialog>
