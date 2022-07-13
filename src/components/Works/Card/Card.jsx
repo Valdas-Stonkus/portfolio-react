@@ -6,11 +6,12 @@ import GitHubIcon from '@mui/icons-material/GitHub'
 import RemoveRedEyeIcon from '@mui/icons-material/RemoveRedEye'
 import { useState } from 'react'
 import Preview from './Preview'
+import Tags from './Tags/Tags'
 
 const Card = ({ project, alwaysShowActionButtons = false }) => {
     const [isMouseOver, setIsMouseOver] = useState(false)
     const [showPreview, setShowPreview] = useState(false)
-    const shortDescription = `${project.description.slice(0, 100)}... `
+    const shortDescription = `${project.description.slice(0, 90)}... `
 
     return (
         <>
@@ -30,6 +31,7 @@ const Card = ({ project, alwaysShowActionButtons = false }) => {
                         height="140"
                         image={project.imgUrl}
                         alt={project.imgAlt}
+                        style={{ objectFit: 'contain', padding: '10px 10px 0px 10px' }}
                     />
                     <CardContent sx={{ pb: '0px' }}>
                         <Typography gutterBottom variant="h6" component="div">
@@ -37,19 +39,10 @@ const Card = ({ project, alwaysShowActionButtons = false }) => {
                         </Typography>
                         <Box mb={2}>
                             <Typography variant="body2" color="text.secondary">
-                                {shortDescription + (isMouseOver || alwaysShowActionButtons ? 'Read more' : '')}
+                                {shortDescription + (isMouseOver || alwaysShowActionButtons ? 'More' : '')}
                             </Typography>
                         </Box>
-                        <Box sx={{ display: 'flex', justifyContent: 'flex-end' }}>
-                            <Typography align="right" variant="overline" color="text.secondary">
-                                {project.tags.map((t, i) => (
-                                    <span key={i}>
-                                        {t}
-                                        {' '}
-                                    </span>
-                                ))}
-                            </Typography>
-                        </Box>
+                        <Tags obj={project} />
                     </CardContent>
                 </CardActionArea>
                 <Box sx={{
@@ -57,18 +50,29 @@ const Card = ({ project, alwaysShowActionButtons = false }) => {
                 }}
                 >
                     <CardActions sx={{ padding: '0 16px 16px 16px', visibility: alwaysShowActionButtons ? 'visible' : isMouseOver ? 'visible' : 'hidden' }}>
+                        {project.btnActionTitle ? (
+                            <Button
+                                variant="contained"
+                                color="primary"
+                                startIcon={(
+                                    <RemoveRedEyeIcon />
+                                )}
+                                size="small"
+                                href={project.btnActionUrl}
+                                target="_blank"
+                            >
+                                {project.btnActionTitle}
+                            </Button>
+                        ) : null}
                         <Button
-                            variant="contained"
-                            color="primary"
-                            startIcon={(
-                                <RemoveRedEyeIcon />
-                            )}
-                            size="small"
-                            href={project.btnActionUrl}
+                            variant="text"
+                            color="secondary"
+                            startIcon={<GitHubIcon />}
+                            href={project.btnRepoUrl}
+                            target="_blank"
                         >
-                            {project.btnActionTitle}
+                            Github repo
                         </Button>
-                        <Button variant="text" color="secondary" startIcon={<GitHubIcon />} href={project.btnRepoUrl} target="_blank">Github repo</Button>
                     </CardActions>
                 </Box>
             </CardMui>
