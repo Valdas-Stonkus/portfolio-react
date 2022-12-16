@@ -5,6 +5,7 @@ import { ThemeProvider, createTheme, responsiveFontSizes } from '@mui/material/s
 import { BrowserRouter } from 'react-router-dom'
 import App from './App'
 import './index.css'
+// import 'semantic-ui-css/semantic.min.css'
 
 const theme = createTheme({
     palette: {
@@ -35,6 +36,7 @@ root.render(
                     maxWidth="false"
                     // sx={{ overflow: 'hidden' }}
                     // FIXME: Overflow prevents scrolling
+                    // FIXME: turn off horizontal bar when resume pop ups
                 >
                     <App />
                 </Container>
