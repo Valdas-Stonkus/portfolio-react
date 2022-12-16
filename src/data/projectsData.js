@@ -49,6 +49,27 @@ export const projects = [
     },
     {
         id: 3,
+        title: 'Basketball Match Simulator',
+        description: 'Simulator of basketball game match. You can start, stop, reset and resume game. The points are counted by the time randomly.',
+        imgUrl: '/projects/basketball-match-simulator.png',
+        imgAlt: 'Basketball arena with a lot of peoples and game info score.',
+        tags: ['JavaScript', 'NodeJs'],
+        btnActionTitle: '',
+        btnActionUrl: '#',
+        btnRepoUrl: 'https://github.com/MrStonkus/Baskeball-match-simulator',
+        problem: 'In BIT (Baltic Technology of Institute) we learn JavaScript, NodeJs but did not did any full app.',
+        solution: 'Create back-end and front-end app using only vanilla JavaScript. ',
+        implementation: 'First I did back-end where implemented main basketball match engine. For this I used NodeJs and Express framework. Then I did front-end where I used HTML, CSS and JavaScript.',
+        pictures: [
+            {
+                img: '/projects/basketball-match-simulator.png',
+                title: 'Basketball arena with a lot of peoples and game info score.'
+            }
+        ]
+
+    },
+    {
+        id: 4,
         title: 'Flights Crawler',
         description: 'The app, looks in www.fly540.com website and collect all cheapest round trip flight combinations from NBO (Nairobi) to MBA (Mombasa).',
         imgUrl: '/projects/flight-crawler.png',
@@ -64,27 +85,6 @@ export const projects = [
             {
                 img: '/projects/flight-crawler.png',
                 title: 'App menu in black console background'
-            }
-        ]
-
-    },
-    {
-        id: 4,
-        title: 'Snake Game',
-        description: 'This is classic Snake game. You can control snake with arrow keys, eat food and grow.',
-        imgUrl: '/projects/snake-game.png',
-        imgAlt: 'Grid of snake game at green background.',
-        tags: ['Python'],
-        btnActionTitle: '',
-        btnActionUrl: '#',
-        btnRepoUrl: 'https://github.com/MrStonkus/snake_python_pygame',
-        problem: 'When I started to learn a develop, I wanted to have any simple game written in Python.',
-        solution: 'I decided to make a simple Snake Game.',
-        implementation: 'For this project I used Python and Pygame library.',
-        pictures: [
-            {
-                img: '/projects/snake-game.png',
-                title: 'Grid of snake game at green background.'
             }
         ]
 
@@ -112,23 +112,24 @@ export const projects = [
     },
     {
         id: 6,
-        title: 'Basketball Match Simulator',
-        description: 'Simulator of basketball game match. You can start, stop, reset and resume game. The points are counted by the time randomly.',
-        imgUrl: '/projects/basketball-match-simulator.png',
-        imgAlt: 'Basketball arena with a lot of peoples and game info score.',
-        tags: ['JavaScript', 'NodeJs'],
+        title: 'Snake Game',
+        description: 'This is classic Snake game. You can control snake with arrow keys, eat food and grow.',
+        imgUrl: '/projects/snake-game.png',
+        imgAlt: 'Grid of snake game at green background.',
+        tags: ['Python'],
         btnActionTitle: '',
         btnActionUrl: '#',
-        btnRepoUrl: 'https://github.com/MrStonkus/Baskeball-match-simulator',
-        problem: 'In BIT (Baltic Technology of Institute) we learn JavaScript, NodeJs but did not did any full app.',
-        solution: 'Create back-end and front-end app using only vanilla JavaScript. ',
-        implementation: 'First I did back-end where implemented main basketball match engine. For this I used NodeJs and Express framework. Then I did front-end where I used HTML, CSS and JavaScript.',
+        btnRepoUrl: 'https://github.com/MrStonkus/snake_python_pygame',
+        problem: 'When I started to learn a develop, I wanted to have any simple game written in Python.',
+        solution: 'I decided to make a simple Snake Game.',
+        implementation: 'For this project I used Python and Pygame library.',
         pictures: [
             {
-                img: '/projects/basketball-match-simulator.png',
-                title: 'Basketball arena with a lot of peoples and game info score.'
+                img: '/projects/snake-game.png',
+                title: 'Grid of snake game at green background.'
             }
         ]
 
     }
+
 ]
