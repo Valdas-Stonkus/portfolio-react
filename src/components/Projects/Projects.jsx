@@ -5,13 +5,13 @@ import { projects } from '../../data/projectsData'
 import Card from './Card'
 import TagFilter from './TagFilter'
 
-const Work = () => {
+const Projects = () => {
     const [filteredProjects, setFilteredProjects] = useState(projects)
 
     return (
         <Container>
             <SectionTitle
-                title="Works"
+                title="Projects"
                 captionLine1="Check my commercial and non commercial projects."
                 captionLine2="If you have any questions feel free to ask me for more information."
             />
@@ -39,4 +39,4 @@ const Work = () => {
     )
 }
 
-export default Work
+export default Projects

@@ -2,11 +2,32 @@
 export const projects = [
     {
         id: 1,
+        title: 'Warfarin Dose Calendar',
+        description: 'This calculator gives ideal doses schedule calendar for selected anticoagulants medicines. It is tested in real life, the results are very good.',
+        imgUrl: '/projects/warfarin-dose-calendar.png',
+        imgAlt: 'Screenshot of warfarin dose calendar',
+        tags: ['React', 'NodeJs', 'JavaScript', 'Bootstrap'],
+        btnActionTitle: 'Demo',
+        btnActionUrl: 'https://stonkus.lt/projects/warfarin-dose-calendar/',
+        btnRepoUrl: 'https://github.com/MrStonkus/warfarin-dose-calendar',
+        problem: 'People who need to take anticoagulants (blood thinners) throughout their lives and monitor their INR levels. And this is quite difficult to do. If the INR is too high or too low as determined by doctors, it can have a negative effect on the person.',
+        solution: 'I decided to an app calculator where peoples have ability to quickly set they medicine data and get medicine dose calendar.',
+        implementation: 'For this project I used React as main framework. The biggest problem was create API dose calculator. This one I did with NodeJs.',
+        pictures: [
+            {
+                img: '/projects/warfarin-dose-calendar.png',
+                title: 'Screenshot of warfarin dose calendar'
+            }
+        ]
+
+    },
+    {
+        id: 2,
         title: 'Portfolio',
         description: 'This project is my personal portfolio website. First it was made with vanilla HTML and CSS, after that with React.',
         imgUrl: 'http://fakeimg.pl/500?font=lobster',
         imgAlt: 'Thumbnail of Portfolio website',
-        tags: ['React', 'MUI'],
+        tags: ['React', 'JavaScript', 'MUI'],
         btnActionTitle: 'Demo',
         btnActionUrl: 'https://stonkus.lt/',
         btnRepoUrl: 'https://github.com/MrStonkus/portfolio-react',
@@ -22,27 +43,6 @@ export const projects = [
             {
                 img: 'https://images.unsplash.com/photo-1549388604-817d15aa0110',
                 title: 'Bed'
-            }
-        ]
-
-    },
-    {
-        id: 2,
-        title: 'Warfarin Dose Calendar',
-        description: 'This calculator gives ideal doses schedule calendar for selected anticoagulants medicines. It is tested in real life, the results are very good.',
-        imgUrl: '/projects/warfarin-dose-calendar.png',
-        imgAlt: 'Screenshot of warfarin dose calendar',
-        tags: ['React', 'NodeJs', 'Bootstrap'],
-        btnActionTitle: 'Demo',
-        btnActionUrl: 'https://stonkus.lt/projects/warfarin-dose-calendar/',
-        btnRepoUrl: 'https://github.com/MrStonkus/warfarin-dose-calendar',
-        problem: 'People who need to take anticoagulants (blood thinners) throughout their lives and monitor their INR levels. And this is quite difficult to do. If the INR is too high or too low as determined by doctors, it can have a negative effect on the person.',
-        solution: 'I decided to an app calculator where peoples have ability to quickly set they medicine data and get medicine dose calendar.',
-        implementation: 'For this project I used React as main framework. The biggest problem was create API dose calculator. This one I did with NodeJs.',
-        pictures: [
-            {
-                img: '/projects/warfarin-dose-calendar.png',
-                title: 'Screenshot of warfarin dose calendar'
             }
         ]
 

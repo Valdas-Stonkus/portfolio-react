@@ -23,7 +23,8 @@ const TagFilter = ({ objectArr, setFilteredObjArr }) => {
         })
     })
     initTags.forEach((tag) => { tag.count = tagCounter[tag.name] })
-    initTags = sortObjectByValue(initTags)
+    // initTags = sortObjectByValue(initTags)
+    // TODO remove if not used
 
     const [tags, setTags] = useState(initTags)
 
