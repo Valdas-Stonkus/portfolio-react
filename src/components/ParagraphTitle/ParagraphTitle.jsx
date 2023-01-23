@@ -1,12 +1,9 @@
-import './styles.scss'
-import { Box, Typography } from '@mui/material'
-
+import './ParagraphTitle.scss'
+// TODO remove component if not used
 const ParagraphTitle = ({ children }) => (
-    <Box className="container">
-        <Typography variant="h5" component="h6" className="paragraphTitle">
-            {children}
-        </Typography>
-    </Box>
+    <div className="portfolio-paragraph-title">
+        {children}
+    </div>
 )
 
 export default ParagraphTitle

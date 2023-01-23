@@ -65,6 +65,7 @@
       "extensions": [".js", ".jsx"]
     }],
     "react/react-in-jsx-scope": "off",
-    "class-methods-use-this": "off"
+    "class-methods-use-this": "off",
+    "no-plusplus": [2, { "allowForLoopAfterthoughts": true }]
   }
 }

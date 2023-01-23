@@ -1,71 +1,138 @@
 import {
-    Box, Button, Container, Typography
-} from '@mui/material'
-import ColumnLists from '../../components/ColumnLists'
+    FaPhone, FaEnvelope, FaLinkedin, FaReact, FaNodeJs
+} from 'react-icons/fa'
+import {
+    SiTypescript,
+    SiJavascript,
+    SiSass,
+    SiBootstrap,
+    SiHtml5,
+    SiCss3,
+    SiMongodb,
+    SiPython,
+    SiContentful,
+    SiStorybook,
+    SiEslint,
+    SiInsomnia
+} from 'react-icons/si'
+import IconsList from '../../components/IconsList'
 import ParagraphTitle from '../../components/ParagraphTitle'
-import ResumeParagraph from '../../components/ResumeParagraph'
 import SectionTitle from '../../components/SectionTitle'
+import DetailTitle from '../../components/DetailTitle'
 import DownloadFile from '../../components/DownloadFile'
-import ContactForm from '../../components/ContactForm'
+import './ResumePage.scss'
+import { resumeDetailSections1Col, resumeDetailSections2Col } from '../../data/resumeData'
 
 /* eslint-disable max-len */
-const ResumePage = () => (
+const ResumePage = () => {
+    const studies = [
+        {
+            dates: '2021-2022',
+            title: 'Front-end Web Developer',
+            institution: '"Baltic Institute of Technology"'
+        },
+        {
+            dates: '2000-2005',
+            title: 'Bachelor of Economic',
+            institution: '"University of Šiauliai"'
+        }
+    ]
+    const skillItems = [
+        { name: 'React', icon: <FaReact /> },
+        { name: 'TypeScript', icon: <SiTypescript /> },
+        { name: 'SASS', icon: <SiSass /> },
+        { name: 'JavaScript', icon: <SiJavascript /> },
+        { name: 'CSS', icon: <SiCss3 /> },
+        { name: 'Node.js', icon: <FaNodeJs /> },
+        { name: 'HTML5', icon: <SiHtml5 /> },
+        { name: 'Bootstrap', icon: <SiBootstrap /> },
+        { name: 'MongoDB', icon: <SiMongodb /> },
+        { name: 'Contentful', icon: <SiContentful /> },
+        { name: 'Storybook', icon: <SiStorybook /> },
+        { name: 'Python', icon: <SiPython /> }
+        // { name: 'Eslint', icon: <SiEslint /> },
+        // { name: 'Insomnia', icon: <SiInsomnia /> }
+    ]
+    const experience = [
+        {
+            dates: '2022-2023',
+            title: 'Junior Developer',
+            institution: '"Reaching For Zero"'
+        },
+        {
+            dates: '2017-2022',
+            title: 'Project manager',
+            institution: '"UAB NIRLITA"'
+        },
+        {
+            dates: '2006-2017',
+            title: 'Manager',
+            institution: '"UAB DIDMAX"'
+        },
+        {
+            dates: '2004-2006',
+            title: 'Project manager',
+            institution: '"UAB NIRLITA"'
+        }
+    ]
 
-    <Container sx={{
-        display: 'flex', flexDirection: 'column', margin: '1.5em 0'
-    }}
-    >
-        <SectionTitle
-            title="Resume"
-            captionLine1="I started my journey a programmer 2 years ago when I enrolled in Python course at where I learned to code and just for fun build AI application."
-            captionLine2="During the following years I developed my skills in Front-end web app development."
-        />
-        <Container sx={{
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'flex-start'
-        }}
-        >
-            <ParagraphTitle>Education</ParagraphTitle>
-            <ResumeParagraph
-                style={{ textAlign: 'left' }}
-                title="Front-end Web Developer"
-                institution="Baltic Institute of Technology"
-                dates="2021 - 2022"
-            />
-            <ResumeParagraph
-                title="Bachelor of Economics"
-                institution="Šiauliai University"
-                dates="2000 - 2005"
-            />
-            <ParagraphTitle>Work experience</ParagraphTitle>
-            <ResumeParagraph
-                title="Project manager"
-                institution="UAB NIRLITA"
-                dates="2017 - 2022"
-            />
-            <ResumeParagraph
-                title="Director"
-                institution="UAB DIDMAX"
-                dates="2007 - 2015"
-            />
-            <ParagraphTitle>Skills and Tools</ParagraphTitle>
-            <ColumnLists
-                items={
-                    [
-                        ['ReactJs', 'JavaScript', 'NodeJs', 'Python'],
-                        ['VueJs', 'Contentful', 'Storybook', 'Agile'],
-                        ['Git', 'HTML5', 'CSS', 'SCSS']
-                    ]
-                }
-            />
+    return (
+        <div className="portfolio-resume-page__wrapper">
+            <h1>Resume</h1>
+            <div className="portfolio-resume-page__header">
+                <div className="portfolio-resume-page__details-name">Valdas</div>
+                <div className="portfolio-resume-page__details-name">Stonkus</div>
+                <div className="portfolio-resume-page__details-position">front-end developer</div>
+                <div className="portfolio-resume-page__no-link portfolio-resume-page__gap1">
+                    <FaEnvelope />
+                    <a href="mailto:valdas@stonkus.lt" target="_blank" rel="noreferrer">valdas@stonkus.lt</a>
+                </div>
+                <div className="portfolio-resume-page__no-link portfolio-resume-page__gap1">
+                    <FaPhone />
+                    <a href="tel:+37060080084">+370 600 80084</a>
+                </div>
+                <div className="portfolio-resume-page__no-link portfolio-resume-page__gap1">
+                    <FaLinkedin />
+                    <a href="https://www.linkedin.com/in/mrstonkus/" target="_blank" rel="noreferrer">linkedin.com/in/mrstonkus</a>
+                </div>
+            </div>
+            <div className="portfolio-resume-page__grid-section">
+                <div className="portfolio-resume-page__grid-item">
+                    <DetailTitle>About me</DetailTitle>
+                    Some text.....
+                </div>
+                <div className="portfolio-resume-page__grid-item">
+                    <DetailTitle>Studies</DetailTitle>
+                    {studies.map((detail, index) => (
+                        <span key={index} className="portfolio-resume-page__detail">
+                            <div>{detail.dates}</div>
+                            <div className="portfolio-resume-page__detail-title">{detail.title}</div>
+                            <div>{detail.institution}</div>
+                        </span>
+                    ))}
+                </div>
+                <div className="portfolio-resume-page__grid-item">
+                    <DetailTitle>Technical skills</DetailTitle>
+                    <IconsList itemArr={skillItems} />
+                </div>
+                <div className="portfolio-resume-page__grid-item">
+                    <DetailTitle>Experience</DetailTitle>
+                    {experience.map((detail, index) => (
+                        <span key={index} className="portfolio-resume-page__detail">
+                            <div>{detail.dates}</div>
+                            <div className="portfolio-resume-page__detail-title">{detail.title}</div>
+                            <div>{detail.institution}</div>
+                        </span>
+                    ))}
+                </div>
+            </div>
+            <ParagraphTitle>Resume PDF</ParagraphTitle>
             <DownloadFile
                 caption="Download my resume as PDF file:"
                 url="/downloads/v.stonkus-resume.pdf"
             />
-            <ContactForm />
-        </Container>
+        </div>
+    )
+}
 
-    </Container>
-)
 export default ResumePage

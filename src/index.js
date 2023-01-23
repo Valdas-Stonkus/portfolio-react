@@ -37,6 +37,7 @@ root.render(
                     // sx={{ overflow: 'hidden' }}
                     // FIXME: Overflow prevents scrolling
                     // FIXME: turn off horizontal bar when resume pop ups
+                    // FIXME: print problem, fix it or leave?
                 >
                     <App />
                 </Container>

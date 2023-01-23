@@ -1,0 +1,90 @@
+.portfolio-resume-page {
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+    }
+
+    &__header {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        border-left: 2px solid grey;
+        padding-left: 1rem;
+        margin-bottom: 3rem;
+    }
+
+    &__details-name {
+        font-weight: bold;
+        font-size: 4rem;
+        line-height: 3.2rem;
+    }
+
+    &__details-position {
+        font-weight: bold;
+        font-size: 2rem;
+        line-height: 3rem;
+    }
+
+    &__no-link {
+        a {
+            text-decoration: none;
+            color: initial;
+            cursor: pointer;
+        }
+    }
+
+    &__gap1 {
+        display: flex;
+        gap: 0.7rem;
+    }
+
+    &__grid-section {
+        display: grid;
+        grid-template-columns: 3fr 2fr;
+        gap: 3rem;
+    }
+
+    &__grid-item {
+        padding: 0 1rem;
+        margin: 0 1rem;
+        border-left: 2px solid grey;
+    }
+
+    &__detail {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    &__detail:not(:last-child) {
+        margin-bottom: 1rem;
+    }
+
+    &__detail-title {
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+
+
+    // &__detail-sections {
+    //     &--one-column {
+    //         display: grid;
+    //         grid-template-columns: 1fr;
+    //         row-gap: 3rem;
+    //         padding: 0 4rem;
+    //         margin-bottom: 2rem;
+    //     }
+
+    //     &--two-columns {
+    //         display: grid;
+    //         grid-template-columns: 1fr 1fr;
+    //         row-gap: 3rem;
+    //         padding: 0 4rem;
+    //         margin-bottom: 2rem;
+    //     }
+    // }
+}

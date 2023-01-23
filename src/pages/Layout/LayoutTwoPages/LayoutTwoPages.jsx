@@ -1,4 +1,3 @@
-import { Outlet } from 'react-router-dom'
 import { Container } from '@mui/material'
 import { useEffect, useRef, useState } from 'react'
 import HomePage from '../../HomePage'
@@ -45,6 +44,7 @@ const LayoutTwoPages = () => {
             disableGutters
             maxWidth="lg"
             sx={{
+                // TODO recheck this red
                 bgcolor: 'red',
                 position: 'relative',
                 top: '0px'

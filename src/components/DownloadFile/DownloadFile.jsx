@@ -1,13 +1,13 @@
-import {
-    Box, Button, Typography, Link
-} from '@mui/material'
-import FileDownloadOutlinedIcon from '@mui/icons-material/FileDownloadOutlined'
+import './DownloadFile.scss'
+import { Button, Link } from '@mui/material'
+import { FaFileDownload } from 'react-icons/fa'
 
 const DownloadFile = ({ caption, url }) => (
-    <Box sx={{ textAlign: 'center', marginTop: '1.5em' }}>
-        <Typography variant="h6" sx={{ marginBottom: '5px' }}>{caption}</Typography>
+
+    <div className="portfolio-download-file">
+        <div className="portfolio-download-file__caption">{caption}</div>
         <Button variant="contained" bgcolor="black" download>
-            <FileDownloadOutlinedIcon sx={{ marginRight: '5px' }} />
+            <FaFileDownload style={{ marginRight: '5px' }} />
             <Link
                 href={url}
                 underline="none"
@@ -17,7 +17,7 @@ const DownloadFile = ({ caption, url }) => (
                 Download
             </Link>
         </Button>
-    </Box>
+    </div>
 )
 
 export default DownloadFile

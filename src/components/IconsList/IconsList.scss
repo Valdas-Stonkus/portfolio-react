@@ -1,0 +1,29 @@
+.portfolio-column-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 1rem;
+    width: 100%;
+    margin: 0 0 1rem 1rem;
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__item-icon {
+        display: flex;
+        justify-content: center;
+        font-size: 4rem;
+    }
+}
+
+// FIXME fix mobile styles
+// for mobile screen
+@media only screen and (max-width: 600px) {
+    .portfolio-column-list {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 0.5rem;
+        margin: 0 0 1rem 0;
+    }
+}
