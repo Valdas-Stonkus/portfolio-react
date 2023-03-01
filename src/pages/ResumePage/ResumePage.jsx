@@ -1,5 +1,5 @@
 import {
-    FaPhone, FaEnvelope, FaLinkedin, FaReact, FaNodeJs
+    FaPhone, FaEnvelope, FaLinkedin, FaReact, FaNodeJs, FaGithub
 } from 'react-icons/fa'
 import {
     SiTypescript,
@@ -80,26 +80,31 @@ const ResumePage = () => {
         <div className="portfolio-resume-page__wrapper">
             <h1>Resume</h1>
             <div className="portfolio-resume-page__header">
-                <div className="portfolio-resume-page__details-name">Valdas</div>
-                <div className="portfolio-resume-page__details-name">Stonkus</div>
-                <div className="portfolio-resume-page__details-position">front-end developer</div>
+                <div className="portfolio-resume-page__full-name">
+                    <div>Valdas</div>
+                    <div>Stonkus</div>
+                </div>
                 <div className="portfolio-resume-page__no-link portfolio-resume-page__gap1">
-                    <FaEnvelope />
-                    <a href="mailto:valdas@stonkus.lt" target="_blank" rel="noreferrer">valdas@stonkus.lt</a>
+                    <FaGithub />
+                    <a href="http://github.com/MrStonkus" target="_blank" rel="noreferrer">GitHub</a>
+                </div>
+                <div className="portfolio-resume-page__no-link portfolio-resume-page__gap1">
+                    <FaLinkedin />
+                    <a href="https://www.linkedin.com/in/mrstonkus/" target="_blank" rel="noreferrer">LinkedIn</a>
                 </div>
                 <div className="portfolio-resume-page__no-link portfolio-resume-page__gap1">
                     <FaPhone />
                     <a href="tel:+37060080084">+370 600 80084</a>
                 </div>
                 <div className="portfolio-resume-page__no-link portfolio-resume-page__gap1">
-                    <FaLinkedin />
-                    <a href="https://www.linkedin.com/in/mrstonkus/" target="_blank" rel="noreferrer">linkedin.com/in/mrstonkus</a>
+                    <FaEnvelope />
+                    <a href="mailto:valdas@stonkus.lt" target="_blank" rel="noreferrer">valdas@stonkus.lt</a>
                 </div>
             </div>
             <div className="portfolio-resume-page__grid-section">
                 <div className="portfolio-resume-page__grid-item">
                     <DetailTitle>About me</DetailTitle>
-                    Some text.....
+                    I am a passionate front-end developer with experience in HTML, CSS, JavaScript, TypeScript, and ReactJS. I gained valuable team experience while working on a commercial project after finishing my studies at the Baltic Technology Institute. Now, I am open to new opportunities and ready to create visually appealing web applications. Feel free to contact me if you need a dedicated team player who is always willing to go the extra mile.
                 </div>
                 <div className="portfolio-resume-page__grid-item">
                     <DetailTitle>Studies</DetailTitle>

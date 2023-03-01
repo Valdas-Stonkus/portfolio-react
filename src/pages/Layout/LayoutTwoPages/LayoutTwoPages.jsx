@@ -36,6 +36,7 @@ const LayoutTwoPages = () => {
         if (action === 'activateFirstPage') {
             setLeftPageActive(true)
         } else {
+            console.log('Activation')
             setLeftPageActive(false)
         }
     }

@@ -32,15 +32,15 @@ root.render(
         <CssBaseline />
         <ThemeProvider theme={theme}>
             <BrowserRouter>
-                <Container
+                {/* <Container
                     maxWidth="false"
-                    // sx={{ overflow: 'hidden' }}
-                    // FIXME: Overflow prevents scrolling
-                    // FIXME: turn off horizontal bar when resume pop ups
-                    // FIXME: print problem, fix it or leave?
+                // sx={{ overflow: 'hidden' }}
+                // FIXME: Overflow prevents scrolling
+                // FIXME: turn off horizontal bar when resume pop ups
+                // FIXME: print problem, fix it or leave?
                 >
-                    <App />
-                </Container>
+                </Container> */}
+                <App />
             </BrowserRouter>
         </ThemeProvider>
     </React.StrictMode>
@@ -49,3 +49,4 @@ root.render(
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+// FIXME clear code by removing comments
