@@ -7,6 +7,20 @@
         padding: 1rem;
     }
 
+    &__title--active,
+    &__title--not-active {
+        margin-top: 0;
+    }
+
+    &__title--active {
+        cursor: default;
+    }
+
+    &__title--not-active {
+        cursor: pointer;
+    }
+
+
     &__header {
         display: flex;
         flex-direction: column;

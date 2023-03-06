@@ -3,11 +3,11 @@ import Welcome from '../../components/Welcome'
 import Projects from '../../components/Projects'
 import Footer from '../../components/Footer'
 
-const HomePage = () => (
+const HomePage = ({ isActive }) => (
     <>
         <Header />
         <Welcome />
-        <Projects />
+        <Projects isActive={isActive} />
         <Footer />
     </>
 )

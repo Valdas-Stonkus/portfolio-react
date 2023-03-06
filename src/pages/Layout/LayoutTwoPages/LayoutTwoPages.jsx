@@ -36,7 +36,6 @@ const LayoutTwoPages = () => {
         if (action === 'activateFirstPage') {
             setLeftPageActive(true)
         } else {
-            console.log('Activation')
             setLeftPageActive(false)
         }
     }
@@ -62,7 +61,7 @@ const LayoutTwoPages = () => {
                     backgroundColor: 'white'
                 }}
             >
-                <HomePage />
+                <HomePage isActive={isLeftPageActive} />
             </Container>
             <Container
                 ref={rightPageEl}
@@ -75,7 +74,7 @@ const LayoutTwoPages = () => {
                     backgroundColor: 'white'
                 }}
             >
-                <ResumePage />
+                <ResumePage isActive={!isLeftPageActive} />
             </Container>
 
         </Container>

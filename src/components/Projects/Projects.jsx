@@ -5,7 +5,7 @@ import { projects } from '../../data/projectsData'
 import Card from './Card'
 import TagFilter from './TagFilter'
 
-const Projects = () => {
+const Projects = ({ isActive }) => {
     const [filteredProjects, setFilteredProjects] = useState(projects)
 
     return (
@@ -31,7 +31,7 @@ const Projects = () => {
                             alignItems: 'center'
                         }}
                     >
-                        <Card project={project} alwaysShowActionButtons={i === 0} />
+                        <Card isActive={isActive} project={project} alwaysShowActionButtons={i === 0} />
                     </Grid>
                 ))}
             </Grid>

@@ -24,7 +24,7 @@ import './ResumePage.scss'
 import { resumeDetailSections1Col, resumeDetailSections2Col } from '../../data/resumeData'
 
 /* eslint-disable max-len */
-const ResumePage = () => {
+const ResumePage = ({ isActive }) => {
     const studies = [
         {
             dates: '2021-2022',
@@ -78,19 +78,11 @@ const ResumePage = () => {
 
     return (
         <div className="portfolio-resume-page__wrapper">
-            <h1>Resume</h1>
+            <h1 className={isActive ? 'portfolio-resume-page__title--active' : 'portfolio-resume-page__title--not-active'}>Resume</h1>
             <div className="portfolio-resume-page__header">
                 <div className="portfolio-resume-page__full-name">
                     <div>Valdas</div>
                     <div>Stonkus</div>
-                </div>
-                <div className="portfolio-resume-page__no-link portfolio-resume-page__gap1">
-                    <FaGithub />
-                    <a href="http://github.com/MrStonkus" target="_blank" rel="noreferrer">GitHub</a>
-                </div>
-                <div className="portfolio-resume-page__no-link portfolio-resume-page__gap1">
-                    <FaLinkedin />
-                    <a href="https://www.linkedin.com/in/mrstonkus/" target="_blank" rel="noreferrer">LinkedIn</a>
                 </div>
                 <div className="portfolio-resume-page__no-link portfolio-resume-page__gap1">
                     <FaPhone />
@@ -99,6 +91,14 @@ const ResumePage = () => {
                 <div className="portfolio-resume-page__no-link portfolio-resume-page__gap1">
                     <FaEnvelope />
                     <a href="mailto:valdas@stonkus.lt" target="_blank" rel="noreferrer">valdas@stonkus.lt</a>
+                </div>
+                <div className="portfolio-resume-page__no-link portfolio-resume-page__gap1">
+                    <FaGithub />
+                    <a href="http://github.com/MrStonkus" target="_blank" rel="noreferrer">github.com/MrStonkus</a>
+                </div>
+                <div className="portfolio-resume-page__no-link portfolio-resume-page__gap1">
+                    <FaLinkedin />
+                    <a href="https://www.linkedin.com/in/mrstonkus/" target="_blank" rel="noreferrer">linkedin.com/in/mrstonkus</a>
                 </div>
             </div>
             <div className="portfolio-resume-page__grid-section">

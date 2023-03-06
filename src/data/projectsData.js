@@ -25,7 +25,7 @@ export const projects = [
         id: 2,
         title: 'Portfolio',
         description: 'This project is my personal portfolio website. First it was made with vanilla HTML and CSS, after that with React.',
-        imgUrl: 'http://fakeimg.pl/500?font=lobster',
+        imgUrl: '/projects/portfolio.png',
         imgAlt: 'Thumbnail of Portfolio website',
         tags: ['React', 'JavaScript', 'MUI'],
         btnActionTitle: 'Demo',
@@ -36,13 +36,9 @@ export const projects = [
         implementation: 'I used React for the frontend and SASS for the styling. I used Material UI for the components.',
         pictures: [
             {
-                img: 'https://thevintagent.com/dev/wp-content/uploads/2018/01/Essence-Motocycles-The-Current-The-Vintagent-E-Raw-%C2%A9ThomasCortesi-25-1024x683.jpg',
-                title: 'Blinds',
-                featured: true
-            },
-            {
-                img: 'https://images.unsplash.com/photo-1549388604-817d15aa0110',
-                title: 'Bed'
+                img: '/projects/portfolio.png',
+                title: 'Portfolio'
+                // featured: true
             }
         ]
 

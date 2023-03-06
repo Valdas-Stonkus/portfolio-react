@@ -8,7 +8,7 @@ import { useState } from 'react'
 import Preview from './Preview'
 import Tags from './Tags/Tags'
 
-const Card = ({ project, alwaysShowActionButtons = false }) => {
+const Card = ({ isActive, project, alwaysShowActionButtons = false }) => {
     const [isMouseOver, setIsMouseOver] = useState(false)
     const [showPreview, setShowPreview] = useState(false)
     const shortDescription = `${project.description.slice(0, 90)}... `
@@ -25,7 +25,7 @@ const Card = ({ project, alwaysShowActionButtons = false }) => {
                     flexDirection: 'column'
                 }}
             >
-                <CardActionArea onClick={() => setShowPreview(true)}>
+                <CardActionArea onClick={() => (isActive ? setShowPreview(true) : '')}>
                     <CardMedia
                         component="img"
                         height="140"
