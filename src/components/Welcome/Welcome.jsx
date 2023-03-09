@@ -10,7 +10,6 @@ import './Welcome.css'
 
 const Welcome = () => (
     <Container>
-
         <Stack
             direction={{ xs: 'column', sm: 'row' }}
             spacing={{ xs: 1, sm: 2, md: 3 }}
@@ -20,11 +19,9 @@ const Welcome = () => (
             <Box flex={5}>
                 <AvatarCustom picture={personalPicture} />
             </Box>
-
             <Box p={{ xs: 0, sm: 1, md: 2 }} flex={7}>
                 <Greetings />
             </Box>
-
         </Stack>
     </Container>
 )
