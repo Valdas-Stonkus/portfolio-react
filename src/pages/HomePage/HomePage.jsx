@@ -3,10 +3,10 @@ import Welcome from '../../components/Welcome'
 import Projects from '../../components/Projects'
 import Footer from '../../components/Footer'
 
-const HomePage = ({ isActive }) => (
+const HomePage = ({ isActive, setLeftPageActive, activateSecondPage }) => (
     <>
         <Header />
-        <Welcome />
+        <Welcome activateSecondPage={activateSecondPage} />
         <Projects isActive={isActive} />
         <Footer />
     </>

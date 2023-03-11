@@ -35,7 +35,7 @@ const LayoutTwoPages = () => {
     const clickHandler = (action) => {
         if (action === 'activateFirstPage') {
             setLeftPageActive(true)
-        } else {
+        } else if (action === 'activateSecondPage') {
             setLeftPageActive(false)
         }
     }
@@ -61,11 +61,11 @@ const LayoutTwoPages = () => {
                     backgroundColor: 'white'
                 }}
             >
-                <HomePage isActive={isLeftPageActive} />
+                <HomePage isActive={isLeftPageActive} activateSecondPage={setLeftPageActive} />
             </Container>
             <Container
                 ref={rightPageEl}
-                onClick={() => clickHandler('')}
+                onClick={() => clickHandler('activateSecondPage')}
                 disableGutters
                 maxWidth="md"
                 sx={{

@@ -102,11 +102,11 @@ const ResumePage = ({ isActive }) => {
                 </div>
             </div>
             <div className="portfolio-resume-page__grid-section">
-                <div className="portfolio-resume-page__grid-item">
+                <div className="portfolio-resume-page__grid-item--left">
                     <DetailTitle>About me</DetailTitle>
-                    I am a passionate front-end developer with experience in HTML, CSS, JavaScript, TypeScript, and ReactJS. I gained valuable team experience while working on a commercial project after finishing my studies at the Baltic Technology Institute. Now, I am open to new opportunities and ready to create visually appealing web applications. Feel free to contact me if you need a dedicated team player who is always willing to go the extra mile.
+                    I am a dedicated front-end developer with a passion for creating visually appealing web applications. I have experience in HTML, CSS, JavaScript, TypeScript, and ReactJS, which I gained while working on a commercial project after completing my studies at the Baltic Technology Institute. During this project, I was responsible for the front-end development and worked collaboratively with a team to create responsive designs and React components.
                 </div>
-                <div className="portfolio-resume-page__grid-item">
+                <div className="portfolio-resume-page__grid-item--right">
                     <DetailTitle>Studies</DetailTitle>
                     {studies.map((detail, index) => (
                         <span key={index} className="portfolio-resume-page__detail">
@@ -116,11 +116,11 @@ const ResumePage = ({ isActive }) => {
                         </span>
                     ))}
                 </div>
-                <div className="portfolio-resume-page__grid-item">
+                <div className="portfolio-resume-page__grid-item--left">
                     <DetailTitle>Technical skills</DetailTitle>
                     <IconsList itemArr={skillItems} />
                 </div>
-                <div className="portfolio-resume-page__grid-item">
+                <div className="portfolio-resume-page__grid-item--right">
                     <DetailTitle>Experience</DetailTitle>
                     {experience.map((detail, index) => (
                         <span key={index} className="portfolio-resume-page__detail">
