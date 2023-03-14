@@ -4,6 +4,7 @@ import { Button, Stack, Typography } from '@mui/material'
 import { handleClickNav } from '../../../utils/helpers'
 
 const Greetings = () => {
+    // FIXME correct this
     const clickHandler = () => {
         console.log('Click')
     }

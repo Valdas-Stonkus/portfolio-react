@@ -9,102 +9,76 @@ import {
     SiMongodb,
     SiPython,
     SiContentful,
-    SiEslint,
     SiStorybook,
+    SiEslint,
     SiInsomnia
 } from 'react-icons/si'
-import IconsList from '../components/IconsList'
 
-export const resumeDetailSections2Col = [
+/* eslint-disable max-len */
+export const aboutMeText = 'I am a dedicated front-end developer with a passion for creating visually appealing web applications. I have experience in HTML, CSS, JavaScript, TypeScript, and ReactJS, which I gained while working on a commercial project after completing my studies at the Baltic Technology Institute. During this project, I was responsible for the front-end development and worked collaboratively with a team to create responsive designs and React components.'
+
+export const studies = [
     {
-        title: 'About me',
-        details: [
-            {
-                text: 'Bla bla bla'
-            }
-        ]
+        dates: '2021-2022',
+        title: 'Front-end Web Developer',
+        institution: '"Baltic Institute of Technology"'
     },
     {
-        title: 'Studies',
-        details: [
-            {
-                dates: '2021-2022',
-                title: 'Front-end Web Developer',
-                institution: '"Baltic Institute of Technology"'
-            },
-            {
-                dates: '2000-2005',
-                title: 'Bachelor of Economic',
-                institution: '"University of Šiauliai"'
-            }
-        ]
-    },
-    {
-        title: 'Experience',
-        details: [
-            {
-                dates: '2022-2023',
-                title: 'Junior Developer',
-                institution: '"Reaching For Zero"'
-            },
-            {
-                dates: '2004-2021',
-                title: 'Project manager',
-                institution: '"UAB NIRLITA"'
-            }
-        ]
-    },
-    {
-        title: 'Technical Skills',
-        details: [
-            {
-                list: <IconsList
-                    itemArr={[
-                        { name: 'React', icon: <FaReact /> },
-                        { name: 'TypeScript', icon: <SiTypescript /> },
-                        { name: 'SASS', icon: <SiSass /> },
-                        { name: 'JavaScript', icon: <SiJavascript /> },
-                        { name: 'CSS', icon: <SiCss3 /> },
-                        { name: 'Bootstrap', icon: <SiBootstrap /> },
-                        { name: 'HTML5', icon: <SiHtml5 /> },
-                        { name: 'Node.js', icon: <FaNodeJs /> },
-                        { name: 'Python', icon: <SiPython /> }
-                        // { name: 'MongoDB', icon: <SiMongodb /> }
-                        // { name: 'Contentful', icon: <SiContentful /> },
-                        // { name: 'Storybook', icon: <SiStorybook /> },
-                        // { name: 'Eslint', icon: <SiEslint /> },
-                        // { name: 'Insomnia', icon: <SiInsomnia /> }
-                    ]}
-                />
-            }
-        ]
+        dates: '2000-2005',
+        title: 'Bachelor of Economic',
+        institution: '"University of Šiauliai"'
     }
 ]
 
-export const resumeDetailSections1Col = [
+export const skillItems = [
+    { name: 'React', icon: <FaReact /> },
+    { name: 'TypeScript', icon: <SiTypescript /> },
+    { name: 'SASS', icon: <SiSass /> },
+    { name: 'JavaScript', icon: <SiJavascript /> },
+    { name: 'CSS', icon: <SiCss3 /> },
+    { name: 'Node.js', icon: <FaNodeJs /> },
+    { name: 'HTML5', icon: <SiHtml5 /> },
+    { name: 'Bootstrap', icon: <SiBootstrap /> },
+    { name: 'MongoDB', icon: <SiMongodb /> },
+    { name: 'Contentful', icon: <SiContentful /> },
+    { name: 'Storybook', icon: <SiStorybook /> },
+    { name: 'Python', icon: <SiPython /> }
+    // { name: 'Eslint', icon: <SiEslint /> },
+    // { name: 'Insomnia', icon: <SiInsomnia /> }
+]
+
+export const experiences = [
     {
-        title: 'Other Skills',
-        details: [
-            {
-                list: <IconsList
-                    itemArr={[
-                        // { name: 'React', icon: <FaReact /> },
-                        // { name: 'TypeScript', icon: <SiTypescript /> },
-                        // { name: 'JavaScript', icon: <SiJavascript /> },
-                        // { name: 'SASS', icon: <SiSass /> },
-                        // { name: 'CSS', icon: <SiCss3 /> },
-                        // { name: 'Bootstrap', icon: <SiBootstrap /> },
-                        // { name: 'HTML5', icon: <SiHtml5 /> },
-                        // { name: 'Node.js', icon: <FaNodeJs /> },
-                        // { name: 'Python', icon: <SiPython /> },
-                        { name: 'Contentful', icon: <SiContentful /> },
-                        { name: 'Storybook', icon: <SiStorybook /> },
-                        { name: 'Eslint', icon: <SiEslint /> },
-                        { name: 'Insomnia', icon: <SiInsomnia /> },
-                        { name: 'MongoDB', icon: <SiMongodb /> }
-                    ]}
-                />
-            }
+        dates: '2022-2023',
+        title: 'Junior Developer',
+        institution: '"Reaching For Zero"',
+        experienceDetails: [
+            'Work on project - an online questionnaire with user and admin panels, tailored to the specific functionality required by the client\'s company',
+            'Creating the frontend part, using React components and programming languages such as JavaScript and TypeScript',
+            'Working as part of a team, utilizing Git and Github for file versioning',
+            'Utilizing CSS, SASS, and Bootstrap styling techniques. The design - responsive and suitable for both mobile and larger screens'
+        ]
+    },
+    {
+        dates: '2004-2006, 2017-2022',
+        title: 'Project manager',
+        institution: '"UAB NIRLITA"',
+        experienceDetails: [
+            'Designing of logistic warehouses, selection of equipment and installation',
+            'Maintaining business customer relationships',
+            'Developing and implementing projects, organizing employees',
+            'Organizing supply from foreign countries, participation in international trade fairs'
+        ]
+    },
+    {
+        dates: '2006-2017',
+        title: 'Manager',
+        institution: '"UAB DIDMAX"',
+        experienceDetails: [
+            'Wholesale trade of sports footwear',
+            'Organization of sports club activities',
+            'Organization of advertising campaigns',
+            'Working with business clients'
         ]
     }
 ]
