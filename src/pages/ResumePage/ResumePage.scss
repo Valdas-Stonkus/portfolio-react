@@ -7,13 +7,9 @@
         padding: 0 3rem;
     }
 
-    &__title--active,
-    &__title--not-active {
-        margin-top: 0;
-    }
-
     &__title--active {
         cursor: default;
+        visibility: hidden;
     }
 
     &__title--not-active {
@@ -34,6 +30,10 @@
         font-size: 4rem;
         line-height: 3.2rem;
         margin-bottom: 1rem;
+    }
+
+    &__position {
+        font-size: 2rem;
     }
 
     &__details-position {
@@ -82,12 +82,14 @@
     &__paragraph-full-width {
         padding: 0 1rem;
         margin: 0 1rem;
+        margin-bottom: 3rem;
     }
 
     &__detail {
         display: flex;
         flex-direction: column;
         width: 100%;
+
     }
 
     &__detail:not(:last-child) {

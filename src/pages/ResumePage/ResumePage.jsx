@@ -9,6 +9,7 @@ import {
     aboutMeText, studies, skillItems, experiences
 } from '../../data/resumeData'
 import './ResumePage.scss'
+import resumePDF from '../../assets/downloads/v.stonkus-frontend-developer-resume.pdf'
 
 const ResumePage = ({ isActive }) => (
     <div className="portfolio-resume-page__wrapper">
@@ -18,6 +19,7 @@ const ResumePage = ({ isActive }) => (
                 <div>Valdas</div>
                 <div>Stonkus</div>
             </div>
+            <div className="portfolio-resume-page__position">front-end developer</div>
             <div className="portfolio-resume-page__no-link portfolio-resume-page__gap1">
                 <FaPhone />
                 <a href="tel:+37060080084">+370 600 80084</a>
@@ -85,7 +87,7 @@ const ResumePage = ({ isActive }) => (
         <ParagraphTitle>Resume PDF</ParagraphTitle>
         <DownloadFile
             caption="Download my resume as PDF file:"
-            url="/downloads/v.stonkus-resume.pdf"
+            url={resumePDF}
         />
     </div>
 )

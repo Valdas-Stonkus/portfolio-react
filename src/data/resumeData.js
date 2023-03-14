@@ -60,6 +60,19 @@ export const experiences = [
         ]
     },
     {
+        dates: '2020-2023',
+        title: '',
+        institution: 'Personal projects at www.stonkus.lt',
+        experienceDetails: [
+            'Warfarin Dose Calendar - built with ReactJs, NodeJs, Bootstrap, and of course, all written in JavaScript',
+            'Portfolio website - was built with React, JavaScript, and Mui',
+            'Basketball Match Simulator - I made this one with vanilla JavaScript and NodeJs',
+            'Flights Crawler - the Python code which gets outbound flights from a real airline company website',
+            'Snake AI Turtle - I have an interest in machine learning, so I built the snake that learns by itself to eat a meal with Python'
+
+        ]
+    },
+    {
         dates: '2004-2006, 2017-2022',
         title: 'Project manager',
         institution: '"UAB NIRLITA"',

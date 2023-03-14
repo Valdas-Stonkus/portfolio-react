@@ -1,4 +1,5 @@
 // import personalPicture from '../../assets/images/valdas_wb.jpg'
+// FIXME remove?
 import { Box, Avatar } from '@mui/material'
 
 import { useTheme } from '@mui/material/styles'
