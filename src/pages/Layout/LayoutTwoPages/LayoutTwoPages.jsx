@@ -76,7 +76,6 @@ const LayoutTwoPages = () => {
             >
                 <ResumePage isActive={!isLeftPageActive} />
             </Container>
-
         </Container>
     )
 }
