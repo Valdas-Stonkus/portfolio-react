@@ -5,54 +5,45 @@ import ResumePage from '../../ResumePage'
 import './styles.scss'
 
 const LayoutTwoPages = () => {
-    const [isLeftPageActive, setLeftPageActive] = useState(true)
-    const leftPageEl = useRef(null)
-    const rightPageEl = useRef(null)
+    const [isHomePageActive, setHomePageActive] = useState(true)
+    const homePageEl = useRef(null)
+    const resumePageEl = useRef(null)
 
     useEffect(
         () => {
-            if (isLeftPageActive) {
-                rightPageEl.current.classList.remove('page-right-fadeIn')
-                leftPageEl.current.classList.remove('page-left-fadeOut')
-                leftPageEl.current.classList.remove('cursor-zoom')
+            if (isHomePageActive) {
+                resumePageEl.current.classList.remove('page-right-fadeIn')
+                homePageEl.current.classList.remove('page-left-fadeOut')
+                homePageEl.current.classList.remove('cursor-zoom')
 
-                leftPageEl.current.classList.add('page-left-fadeIn')
-                rightPageEl.current.classList.add('page-right-fadeOut')
-                rightPageEl.current.classList.add('cursor-zoom')
+                homePageEl.current.classList.add('page-left-fadeIn')
+                resumePageEl.current.classList.add('page-right-fadeOut')
+                resumePageEl.current.classList.add('cursor-zoom')
             } else {
-                leftPageEl.current.classList.remove('page-left-fadeIn')
-                rightPageEl.current.classList.remove('page-right-fadeOut')
-                rightPageEl.current.classList.remove('cursor-zoom')
+                homePageEl.current.classList.remove('page-left-fadeIn')
+                resumePageEl.current.classList.remove('page-right-fadeOut')
+                resumePageEl.current.classList.remove('cursor-zoom')
 
-                rightPageEl.current.classList.add('page-right-fadeIn')
-                leftPageEl.current.classList.add('page-left-fadeOut')
-                leftPageEl.current.classList.add('cursor-zoom')
+                resumePageEl.current.classList.add('page-right-fadeIn')
+                homePageEl.current.classList.add('page-left-fadeOut')
+                homePageEl.current.classList.add('cursor-zoom')
             }
         },
-        [isLeftPageActive]
+        [isHomePageActive]
     )
 
-    const clickHandler = (action) => {
-        if (action === 'activateFirstPage') {
-            setLeftPageActive(true)
-        } else if (action === 'activateSecondPage') {
-            setLeftPageActive(false)
-        }
-    }
     return (
         <Container
             disableGutters
             maxWidth="lg"
             sx={{
-                // TODO recheck this red
-                bgcolor: 'red',
                 position: 'relative',
                 top: '0px'
             }}
         >
             <Container
-                ref={leftPageEl}
-                onClick={() => clickHandler('activateFirstPage')}
+                ref={homePageEl}
+                onClick={() => setHomePageActive(true)}
                 disableGutters
                 maxWidth="md"
                 sx={{
@@ -61,11 +52,11 @@ const LayoutTwoPages = () => {
                     backgroundColor: 'white'
                 }}
             >
-                <HomePage isActive={isLeftPageActive} activateSecondPage={setLeftPageActive} />
+                <HomePage isActive={isHomePageActive} />
             </Container>
             <Container
-                ref={rightPageEl}
-                onClick={() => clickHandler('activateSecondPage')}
+                ref={resumePageEl}
+                onClick={() => setHomePageActive(false)}
                 disableGutters
                 maxWidth="md"
                 sx={{
@@ -74,7 +65,7 @@ const LayoutTwoPages = () => {
                     backgroundColor: 'white'
                 }}
             >
-                <ResumePage isActive={!isLeftPageActive} />
+                <ResumePage isActive={!isHomePageActive} />
             </Container>
         </Container>
     )

@@ -1,17 +1,13 @@
 import {
-    // TODO remove ???
-    Avatar, CardMedia, Grid, Stack
+    Box, Container, Stack
 } from '@mui/material'
-import Box from '@mui/material/Box'
-import Container from '@mui/material/Container'
 import personalPicture from '../../assets/images/valdas_wb.jpg'
 import AvatarCustom from './AvatarCustom/AvatarCustom'
 import Greetings from './Greetings'
 import './Welcome.css'
 
-const Welcome = ({ activateSecondPage }) => (
+const Welcome = () => (
     <Container>
-        <button onClick={() => activateSecondPage(false)}>Click</button>
         <Stack
             direction={{ xs: 'column', sm: 'row' }}
             spacing={{ xs: 1, sm: 2, md: 3 }}
