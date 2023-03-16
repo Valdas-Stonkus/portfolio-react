@@ -29,10 +29,11 @@ const theme = createTheme({
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
     <React.StrictMode>
-        <CssBaseline />
-        <ThemeProvider theme={theme}>
-            <BrowserRouter>
-                {/* <Container
+        <div className="wrapper">
+            <CssBaseline />
+            <ThemeProvider theme={theme}>
+                <BrowserRouter>
+                    {/* <Container
                     maxWidth="false"
                 // sx={{ overflow: 'hidden' }}
                 // FIXME: Overflow prevents scrolling
@@ -40,9 +41,10 @@ root.render(
                 // FIXME: print problem, fix it or leave?
                 >
                 </Container> */}
-                <App />
-            </BrowserRouter>
-        </ThemeProvider>
+                    <App />
+                </BrowserRouter>
+            </ThemeProvider>
+        </div>
     </React.StrictMode>
 )
 
