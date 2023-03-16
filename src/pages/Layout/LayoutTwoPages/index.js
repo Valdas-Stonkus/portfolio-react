@@ -1,1 +1,1 @@
-export { default } from './LayoutTwoPages'
+export { PageContext, default } from './LayoutTwoPages'

@@ -11,8 +11,8 @@ import {
 import './ResumePage.scss'
 import resumePDF from '../../assets/downloads/v.stonkus-frontend-developer-resume.pdf'
 
-const ResumePage = ({ isActive }) => (
-    <div className="portfolio-resume-page__wrapper">
+const ResumePage = ({ isActive, isFocusOnContacts }) => (
+    <div id="resume-page" className="portfolio-resume-page__wrapper">
         <h1 className={isActive ? 'portfolio-resume-page__title--active' : 'portfolio-resume-page__title--not-active'}>Resume</h1>
         <div className="portfolio-resume-page__header">
             <div className="portfolio-resume-page__full-name">
@@ -20,21 +20,23 @@ const ResumePage = ({ isActive }) => (
                 <div>Stonkus</div>
             </div>
             <div className="portfolio-resume-page__position">front-end developer</div>
-            <div className="portfolio-resume-page__no-link portfolio-resume-page__gap1">
-                <FaPhone />
-                <a href="tel:+37060080084">+370 600 80084</a>
-            </div>
-            <div className="portfolio-resume-page__no-link portfolio-resume-page__gap1">
-                <FaEnvelope />
-                <a href="mailto:valdas@stonkus.lt" target="_blank" rel="noreferrer">valdas@stonkus.lt</a>
-            </div>
-            <div className="portfolio-resume-page__no-link portfolio-resume-page__gap1">
-                <FaGithub />
-                <a href="http://github.com/MrStonkus" target="_blank" rel="noreferrer">github.com/MrStonkus</a>
-            </div>
-            <div className="portfolio-resume-page__no-link portfolio-resume-page__gap1">
-                <FaLinkedin />
-                <a href="https://www.linkedin.com/in/mrstonkus/" target="_blank" rel="noreferrer">linkedin.com/in/mrstonkus</a>
+            <div className={isFocusOnContacts ? 'portfolio-resume-page__contacts--focus' : 'portfolio-resume-page__contacts'}>
+                <div className="portfolio-resume-page__no-link portfolio-resume-page__gap1">
+                    <FaPhone />
+                    <a href="tel:+37060080084">+370 600 80084</a>
+                </div>
+                <div className="portfolio-resume-page__no-link portfolio-resume-page__gap1">
+                    <FaEnvelope />
+                    <a href="mailto:valdas@stonkus.lt" target="_blank" rel="noreferrer">valdas@stonkus.lt</a>
+                </div>
+                <div className="portfolio-resume-page__no-link portfolio-resume-page__gap1">
+                    <FaGithub />
+                    <a href="http://github.com/MrStonkus" target="_blank" rel="noreferrer">github.com/MrStonkus</a>
+                </div>
+                <div className="portfolio-resume-page__no-link portfolio-resume-page__gap1">
+                    <FaLinkedin />
+                    <a href="https://www.linkedin.com/in/mrstonkus/" target="_blank" rel="noreferrer">linkedin.com/in/mrstonkus</a>
+                </div>
             </div>
         </div>
         <div className="portfolio-resume-page__grid-section">

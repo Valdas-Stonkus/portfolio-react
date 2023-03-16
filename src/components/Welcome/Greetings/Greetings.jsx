@@ -1,12 +1,14 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import './styles.scss'
 import { Button, Stack, Typography } from '@mui/material'
 import { handleClickNav } from '../../../utils/helpers'
+import { PageContext } from '../../../pages/Layout/LayoutTwoPages/LayoutTwoPages'
 
 const Greetings = () => {
-    // FIXME correct this
-    const clickHandler = () => {
-        console.log('Click')
+    const handleContactMeButton = useContext(PageContext)
+    const handleClick = (e) => {
+        handleContactMeButton(e)
+        handleClickNav('resume-page')
     }
 
     return (
@@ -25,7 +27,13 @@ const Greetings = () => {
                 </p>
             </Typography>
             <Stack direction="row" spacing={2} mt={2} justifyContent="center">
-                <Button variant="contained" bgcolor="black" onClick={clickHandler}>Contact me</Button>
+                <Button
+                    variant="contained"
+                    bgcolor="black"
+                    onClick={handleClick}
+                >
+                    Contact me
+                </Button>
                 <Button
                     variant="outlined"
                     color="secondary"
