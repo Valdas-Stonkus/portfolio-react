@@ -4,18 +4,18 @@ export const projects = [
         id: 1,
         title: 'Warfarin Dose Calendar',
         description: 'This calculator gives ideal doses schedule calendar for selected anticoagulants medicines. It is tested in real life, the results are very good.',
-        imgUrl: '/projects/warfarin-dose-calendar.png',
+        imgUrl: '/project-images/warfarin-dose-calendar.png',
         imgAlt: 'Screenshot of warfarin dose calendar',
         tags: ['React', 'NodeJs', 'JavaScript', 'Bootstrap'],
         btnActionTitle: 'Demo',
-        btnActionUrl: 'https://stonkus.lt/projects/warfarin-dose-calendar/',
+        btnActionUrl: 'https://stonkus.lt/project-images/warfarin-dose-calendar/',
         btnRepoUrl: 'https://github.com/MrStonkus/warfarin-dose-calendar',
         problem: 'People who need to take anticoagulants (blood thinners) throughout their lives and monitor their INR levels. And this is quite difficult to do. If the INR is too high or too low as determined by doctors, it can have a negative effect on the person.',
         solution: 'I decided to an app calculator where peoples have ability to quickly set they medicine data and get medicine dose calendar.',
         implementation: 'For this project I used React as main framework. The biggest problem was create API dose calculator. This one I did with NodeJs.',
         pictures: [
             {
-                img: '/projects/warfarin-dose-calendar.png',
+                img: '/project-images/warfarin-dose-calendar.png',
                 title: 'Screenshot of warfarin dose calendar'
             }
         ]
@@ -25,7 +25,7 @@ export const projects = [
         id: 2,
         title: 'Portfolio',
         description: 'This project is my personal portfolio website. First it was made with vanilla HTML and CSS, after that with React.',
-        imgUrl: '/projects/portfolio.png',
+        imgUrl: '/project-images/portfolio.png',
         imgAlt: 'Thumbnail of Portfolio website',
         tags: ['React', 'JavaScript', 'MUI'],
         btnActionTitle: 'Demo',
@@ -36,7 +36,7 @@ export const projects = [
         implementation: 'I used React for the frontend and SASS for the styling. I used Material UI for the components.',
         pictures: [
             {
-                img: '/projects/portfolio.png',
+                img: '/project-images/portfolio.png',
                 title: 'Portfolio'
                 // featured: true
             }
@@ -47,7 +47,7 @@ export const projects = [
         id: 3,
         title: 'Basketball Match Simulator',
         description: 'Simulator of basketball game match. You can start, stop, reset and resume game. The points are counted by the time randomly.',
-        imgUrl: '/projects/basketball-match-simulator.png',
+        imgUrl: '/project-images/basketball-match-simulator.png',
         imgAlt: 'Basketball arena with a lot of peoples and game info score.',
         tags: ['JavaScript', 'NodeJs'],
         btnActionTitle: '',
@@ -58,7 +58,7 @@ export const projects = [
         implementation: 'First I did back-end where implemented main basketball match engine. For this I used NodeJs and Express framework. Then I did front-end where I used HTML, CSS and JavaScript.',
         pictures: [
             {
-                img: '/projects/basketball-match-simulator.png',
+                img: '/project-images/basketball-match-simulator.png',
                 title: 'Basketball arena with a lot of peoples and game info score.'
             }
         ]
@@ -68,7 +68,7 @@ export const projects = [
         id: 4,
         title: 'Flights Crawler',
         description: 'The app, looks in www.fly540.com website and collect all cheapest round trip flight combinations from NBO (Nairobi) to MBA (Mombasa).',
-        imgUrl: '/projects/flight-crawler.png',
+        imgUrl: '/project-images/flight-crawler.png',
         imgAlt: 'App menu in black console background',
         tags: ['Python'],
         btnActionTitle: '',
@@ -79,7 +79,7 @@ export const projects = [
         implementation: 'This console UI app is a web flight crawler written in python. The app, looks in www.fly540.com website and collect all cheapest round trip flight combinations from NBO (Nairobi) to MBA (Mombasa). Standard departure are 10 and 20 days from current date and returning 7 days after the departure date, but it can be freely modified in code.',
         pictures: [
             {
-                img: '/projects/flight-crawler.png',
+                img: '/project-images/flight-crawler.png',
                 title: 'App menu in black console background'
             }
         ]
@@ -89,7 +89,7 @@ export const projects = [
         id: 5,
         title: 'Snake AI Turtle',
         description: 'App which show how AI snake can learn to eat more and more using reinforcement learning algorithm.',
-        imgUrl: '/projects/snake-ai.png',
+        imgUrl: '/project-images/snake-ai.png',
         imgAlt: 'Grid of snake game at white background.',
         tags: ['Python', 'Reinforcement-Learning'],
         btnActionTitle: '',
@@ -100,7 +100,7 @@ export const projects = [
         implementation: 'I watched couple youtube videos and read couple white papers - documentations. I used Reinforcement learning method, implemented it by Keras library. The result - turtle max record 64 collected foods.',
         pictures: [
             {
-                img: '/projects/snake-ai.png',
+                img: '/project-images/snake-ai.png',
                 title: 'Grid of snake game at white background.'
             }
         ]
@@ -110,7 +110,7 @@ export const projects = [
         id: 6,
         title: 'Snake Game',
         description: 'This is classic Snake game. You can control snake with arrow keys, eat food and grow.',
-        imgUrl: '/projects/snake-game.png',
+        imgUrl: '/project-images/snake-game.png',
         imgAlt: 'Grid of snake game at green background.',
         tags: ['Python'],
         btnActionTitle: '',
@@ -121,7 +121,7 @@ export const projects = [
         implementation: 'For this project I used Python and Pygame library.',
         pictures: [
             {
-                img: '/projects/snake-game.png',
+                img: '/project-images/snake-game.png',
                 title: 'Grid of snake game at green background.'
             }
         ]
