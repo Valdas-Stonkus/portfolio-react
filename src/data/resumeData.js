@@ -89,8 +89,7 @@ export const experiences = [
         institution: '"UAB DIDMAX"',
         experienceDetails: [
             'Wholesale trade of sports footwear',
-            'Organization of sports club activities',
-            'Organization of advertising campaigns',
+            'Organization of sports club activities and advertising campaigns',
             'Working with business clients'
         ]
     }
