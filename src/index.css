@@ -5,13 +5,17 @@ body {
     padding: 0;
 }
 
-.wrapper {
+html {
+    overflow-x: hidden;
+}
+
+.body-wrapper {
     min-height: 100vh;
     position: relative;
     z-index: 1;
 }
 
-.wrapper::before {
+.body-wrapper::before {
     content: '';
     background: rgb(2, 0, 36);
     background: radial-gradient(circle, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
@@ -37,6 +41,5 @@ body {
     -ms-user-select: none;
     /* Internet Explorer/Edge */
     user-select: none;
-    /* Non-prefixed version, currently
-                                  supported by Chrome, Edge, Opera and Firefox */
+    /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
 }
