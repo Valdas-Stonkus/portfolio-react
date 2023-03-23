@@ -43,3 +43,10 @@ html {
     user-select: none;
     /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
 }
+
+$mq-max-small-mobile: '(max-width: 23em)'; // 384px / base value of 16px
+$mq-max-mobile: '(max-width: 26,25em)'; // 420px / base value of 16px
+$mq-max-small-tablet: '(max-width: 31.25em)'; // 500px / base value of 16px
+$mq-max-tablet: '(max-width: 48.0625em)'; // 769px / base value of 16px
+$mq-max-small-desktop: '(max-width: 60em)'; // 960px / base value of 16px
+$mq-max-desktop: '(max-width: 75em)'; // 1200px / base value of 16px
