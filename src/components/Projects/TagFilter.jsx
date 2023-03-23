@@ -1,6 +1,5 @@
 import { Box, Chip, Stack } from '@mui/material'
 import { useEffect, useState } from 'react'
-import { sortObjectByValue } from '../../functions/utils'
 
 const TagFilter = ({ objectArr, setFilteredObjArr }) => {
     let initTags = new Set(['All'])
@@ -23,8 +22,6 @@ const TagFilter = ({ objectArr, setFilteredObjArr }) => {
         })
     })
     initTags.forEach((tag) => { tag.count = tagCounter[tag.name] })
-    // initTags = sortObjectByValue(initTags)
-    // TODO remove if not used
 
     const [tags, setTags] = useState(initTags)
 
