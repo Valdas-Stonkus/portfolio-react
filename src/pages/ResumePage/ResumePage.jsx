@@ -1,5 +1,5 @@
 import {
-    FaPhone, FaEnvelope, FaLinkedin, FaGithub
+    FaPhone, FaEnvelope, FaLinkedin, FaGithub, FaSuitcase, FaUserTie
 } from 'react-icons/fa'
 import IconsList from '../../components/IconsList'
 import ParagraphTitle from '../../components/ParagraphTitle'
@@ -23,19 +23,23 @@ const ResumePage = ({ isActive, isFocusOnContacts }) => (
             <div className={isFocusOnContacts ? 'portfolio-resume-page__contacts--focus' : 'portfolio-resume-page__contacts'}>
                 <div className="portfolio-resume-page__no-link portfolio-resume-page__gap1">
                     <FaPhone />
-                    <a href="tel:+37060080084">+370 600 80084</a>
+                    <a href="tel:+37060080084" alt="Phone number">+370 600 80084</a>
                 </div>
                 <div className="portfolio-resume-page__no-link portfolio-resume-page__gap1">
                     <FaEnvelope />
-                    <a href="mailto:valdas@stonkus.lt" target="_blank" rel="noreferrer">valdas@stonkus.lt</a>
+                    <a href="mailto:valdas@stonkus.lt" target="_blank" rel="noreferrer" alt="Email">valdas@stonkus.lt</a>
                 </div>
                 <div className="portfolio-resume-page__no-link portfolio-resume-page__gap1">
                     <FaGithub />
-                    <a href="http://github.com/MrStonkus" target="_blank" rel="noreferrer">github.com/MrStonkus</a>
+                    <a href="http://github.com/MrStonkus" target="_blank" rel="noreferrer" alt="Github">github.com/MrStonkus</a>
                 </div>
                 <div className="portfolio-resume-page__no-link portfolio-resume-page__gap1">
                     <FaLinkedin />
-                    <a href="https://www.linkedin.com/in/mrstonkus/" target="_blank" rel="noreferrer">linkedin.com/in/mrstonkus</a>
+                    <a href="https://www.linkedin.com/in/mrstonkus/" target="_blank" rel="noreferrer" alt="LinkedIn">linkedin.com/in/mrstonkus</a>
+                </div>
+                <div className="portfolio-resume-page__no-link portfolio-resume-page__gap1">
+                    <FaUserTie />
+                    <a href="http://www.stonkus.lt/" target="_blank" rel="noreferrer" alt="Portfolio of Valdas Stonkus">www.stonkus.lt</a>
                 </div>
             </div>
         </div>
