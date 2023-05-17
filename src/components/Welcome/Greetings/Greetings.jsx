@@ -2,10 +2,9 @@ import React, { useContext } from 'react'
 import './styles.scss'
 import { Button, Stack, Typography } from '@mui/material'
 import { handleClickNav } from '../../../utils/helpers'
-import { PageContext } from '../../../pages/Layout/LayoutTwoPages/LayoutTwoPages'
 
-const Greetings = () => {
-    const handleContactMeButton = useContext(PageContext)
+const Greetings = ({ homePageContext }) => {
+    const handleContactMeButton = useContext(homePageContext)
     const handleClick = (e) => {
         handleContactMeButton(e)
         handleClickNav('resume-page')

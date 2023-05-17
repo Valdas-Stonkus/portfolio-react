@@ -6,9 +6,8 @@ import HomePage from '../../HomePage'
 import ResumePage from '../../ResumePage'
 import './styles.scss'
 
-export const PageContext = React.createContext()
-
 const LayoutTwoPages = () => {
+    const PageContext = React.createContext()
     const [isHomePageActive, setHomePageActive] = useState(true)
     const [isFocusOnContacts, setFocusOnContacts] = useState(false)
     const homePageEl = useRef(null)
@@ -42,9 +41,6 @@ const LayoutTwoPages = () => {
         setHomePageActive(false)
         e.stopPropagation()
         setFocusOnContacts(true)
-        setTimeout(() => {
-            setFocusOnContacts(false)
-        }, 1500)
     }, [])
 
     return (
@@ -68,7 +64,7 @@ const LayoutTwoPages = () => {
                         backgroundColor: 'white'
                     }}
                 >
-                    <HomePage isActive={isHomePageActive} />
+                    <HomePage isActive={isHomePageActive} homePageContext={PageContext} />
                 </Container>
                 <Container
                     ref={resumePageEl}

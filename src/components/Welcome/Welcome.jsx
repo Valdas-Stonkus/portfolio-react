@@ -3,10 +3,10 @@ import {
 } from '@mui/material'
 import personalPicture from '../../assets/images/valdas_wb.jpg'
 import AvatarCustom from './AvatarCustom/AvatarCustom'
-import Greetings from './Greetings'
+import Greetings from './Greetings/Greetings'
 import './Welcome.css'
 
-const Welcome = () => (
+const Welcome = ({ homePageContext }) => (
     <Container>
         <Stack
             direction={{ xs: 'column', sm: 'row' }}
@@ -18,7 +18,7 @@ const Welcome = () => (
                 <AvatarCustom picture={personalPicture} />
             </Box>
             <Box p={{ xs: 0, sm: 1, md: 2 }} flex={7}>
-                <Greetings />
+                <Greetings homePageContext={homePageContext} />
             </Box>
         </Stack>
     </Container>
